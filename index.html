@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073b2a">
+
+  <title>KEYRADDIIN PREMIUM REGISTRATION</title>
+
+  <meta
+    name="description"
+    content="KEYRADDIIN PREMIUM student registration for Grade 9 and Grade 10."
+  >
+
+  <style>
+    :root {
+      --green: #073b2a;
+      --primary: #087443;
+      --light: #e7f5ec;
+      --background: #f2f6f4;
+      --text: #1b2923;
+      --muted: #637168;
+      --border: #dce7df;
+      --white: #ffffff;
+      --red: #b42318;
+      --blue: #168bd2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #073b2a, #087443);
+      color: white;
+      text-align: center;
+      padding: 32px 15px;
+    }
+
+    header h1 {
+      font-size: clamp(22px, 5vw, 30px);
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 650px;
+      margin: 24px auto;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 22px;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      color: var(--green);
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .hero-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      background: var(--light);
+      border: 1px solid #b9dfc7;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 18px 0;
+    }
+
+    .price strong {
+      display: block;
+      color: var(--primary);
+      font-size: 28px;
+    }
+
+    .field {
+      margin: 16px 0;
+    }
+
+    label {
+      display: block;
+      color: var(--green);
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    input,
+    select {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cbd8cf;
+      border-radius: 8px;
+      font-size: 16px;
+      background: white;
+    }
+
+    input:focus,
+    select:focus {
+      outline: 2px solid #b9dfc7;
+      border-color: var(--primary);
+    }
+
+    button,
+    .link-button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 9px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: 14px;
+    }
+
+    .primary-btn {
+      background: var(--primary);
+      color: white;
+    }
+
+    .primary-btn:hover {
+      background: #065b34;
+    }
+
+    .secondary-btn {
+      background: #e9efeb;
+      color: var(--green);
+    }
+
+    .telegram-btn {
+      background: var(--blue);
+      color: white;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .payment {
+      padding: 14px;
+      margin: 12px 0;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: #f7faf8;
+      overflow-wrap: anywhere;
+    }
+
+    .payment strong {
+      color: var(--green);
+    }
+
+    .notice {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    .message {
+      padding: 13px;
+      margin: 14px 0;
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .success {
+      color: #075d35;
+      background: #e7f5ec;
+      border: 1px solid #b9dfc7;
+    }
+
+    .error {
+      color: var(--red);
+      background: #fff0ef;
+      border: 1px solid #f3c5c1;
+    }
+
+    .status-box {
+      padding: 15px;
+      margin-top: 14px;
+      border-radius: 9px;
+      background: var(--light);
+      overflow-wrap: anywhere;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 15px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 420px) {
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>KEYRADDIIN PREMIUM</h1>
+  <p>STUDENT REGISTRATION CENTER</p>
+  <p>Grade 9 &amp; Grade 10</p>
+</header>
+
+<main class="container">
+
+  <!-- HOME -->
+  <section class="card hero" id="homeSection">
+
+    <div class="hero-icon">🎓</div>
+
+    <h2>Welcome, Students!</h2>
+
+    <p>
+      Register for KEYRADDIIN PREMIUM educational support,
+      study groups, and learning opportunities.
+    </p>
+
+    <div class="price">
+      Registration Fee
+      <strong>50 ETB</strong>
+      <span>Grade 9 and Grade 10</span>
+    </div>
+
+    <button class="primary-btn" id="startBtn" type="button">
+      📝 REGISTER NOW
+    </button>
+
+    <button class="secondary-btn" id="openStatusBtn" type="button">
+      🔎 CHECK REGISTRATION STATUS
+    </button>
+
+    <p class="notice">
+      Payment information appears after your registration
+      has been submitted successfully.
+    </p>
+
+  </section>
+
+
+  <!-- REGISTRATION FORM -->
+  <section class="card hidden" id="registrationSection">
+
+    <h2>Student Registration</h2>
+
+    <p>Please enter your correct information.</p>
+
+    <form id="registrationForm">
+
+      <div class="field">
+        <label for="fullName">Full Name</label>
+        <input
+          id="fullName"
+          type="text"
+          maxlength="100"
+          autocomplete="name"
+          placeholder="Enter your full name"
+          required>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input
+          id="phone"
+          type="tel"
+          maxlength="20"
+          autocomplete="tel"
+          placeholder="Enter your phone number"
+          required>
+      </div>
+
+      <div class="field">
+        <label for="grade">Choose Grade</label>
+        <select id="grade" required>
+          <option value="">-- Select grade --</option>
+          <option value="Grade 9">Grade 9</option>
+          <option value="Grade 10">Grade 10</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="schoolName">School Name</label>
+        <input
+          id="schoolName"
+          type="text"
+          maxlength="150"
+          placeholder="Enter your school name"
+          required>
+      </div>
+
+      <div class="field">
+        <label for="paymentMethod">Payment Method</label>
+        <select id="paymentMethod" required>
+          <option value="">-- Select payment method --</option>
+          <option value="E-Birr">E-Birr</option>
+          <option value="M-Pesa">M-Pesa</option>
+        </select>
+      </div>
+
+      <div id="registrationMessage" aria-live="polite"></div>
+
+      <button class="primary-btn" id="submitBtn" type="submit">
+        SUBMIT REGISTRATION
+      </button>
+
+      <button class="secondary-btn" id="cancelRegistrationBtn" type="button">
+        ← BACK TO HOME
+      </button>
+
+    </form>
+
+    <p class="notice">
+      Submitting this form creates a registration record.
+      Your payment will remain Pending until an administrator
+      verifies it.
+    </p>
+
+  </section>
+
+
+  <!-- REGISTRATION SUCCESS AND PAYMENT -->
+  <section class="card hidden" id="paymentSection">
+
+    <h2>Registration Submitted!</h2>
+
+    <div class="message success">
+      Your registration has been saved successfully.
+      Keep your reference code safe.
+    </div>
+
+    <div class="status-box">
+      <p><strong>Reference Code:</strong></p>
+      <p id="referenceCode" style="font-size:22px;font-weight:bold;"></p>
+
+      <button class="secondary-btn" id="copyReferenceBtn" type="button">
+        COPY REFERENCE CODE
+      </button>
+
+      <p><strong>Student:</strong> <span id="summaryName"></span></p>
+      <p><strong>Grade:</strong> <span id="summaryGrade"></span></p>
+      <p><strong>Payment Status:</strong> Pending</p>
+    </div>
+
+    <h2 style="margin-top:22px;">Payment Information</h2>
+
+    <p>Registration fee: <strong>50 ETB</strong></p>
+
+    <div class="payment">
+      <strong>E-Birr</strong>
+      <p>Payment Number: <strong>0995555866</strong></p>
+      <p>Account Name: Keyraddiin Abdella Jibraill</p>
+    </div>
+
+    <div class="payment">
+      <strong>M-Pesa</strong>
+      <p>Payment Number: <strong>0799574155</strong></p>
+      <p>Account Name: Abdella Jibraill Ahmed</p>
+    </div>
+
+    <p class="notice">
+      Carefully check the account name and number before paying.
+      After payment, contact the administrator on Telegram
+      and send your payment proof along with your reference code.
+    </p>
+
+    <a
+      class="link-button telegram-btn"
+      href="https://t.me/Keyr025"
+      target="_blank"
+      rel="noopener noreferrer">
+      📩 SEND PAYMENT PROOF TO ADMIN
+    </a>
+
+    <button class="primary-btn" id="paymentDoneBtn" type="button">
+      FINISH
+    </button>
+
+  </section>
+
+
+  <!-- CHECK STATUS -->
+  <section class="card hidden" id="statusSection">
+
+    <h2>Check Registration Status</h2>
+
+    <p>Enter the reference code you received after registration.</p>
+
+    <form id="statusForm">
+
+      <div class="field">
+        <label for="statusReference">Reference Code</label>
+        <input
+          id="statusReference"
+          type="text"
+          maxlength="20"
+          placeholder="Enter your reference code"
+          required>
+      </div>
+
+      <div class="field">
+        <label for="statusPhone">Phone Number Used for Registration</label>
+        <input
+          id="statusPhone"
+          type="tel"
+          maxlength="20"
+          placeholder="Enter your phone number"
+          required>
+      </div>
+
+      <div id="statusMessage" aria-live="polite"></div>
+
+      <button class="primary-btn" id="checkStatusSubmitBtn" type="submit">
+        CHECK STATUS
+      </button>
+
+    </form>
+
+    <div id="statusResult" class="hidden"></div>
+
+    <button class="secondary-btn" id="statusBackBtn" type="button">
+      ← BACK TO HOME
+    </button>
+
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 KEYRADDIIN PREMIUM REGISTRATION
+  <br>
+  Educational Support for Students
+</footer>
+
+
+<!-- Supabase JavaScript library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  "use strict";
+
+  /*
+   * SUPABASE PROJECT CONFIGURATION
+   * The publishable key is intended for frontend use.
+   * Never put a service_role or secret key in this file.
+   */
+  const SUPABASE_URL =
+    "https://ddclqmfeseppltibkwzx.supabase.co";
+
+  const SUPABASE_PUBLISHABLE_KEY =
+    "sb_publishable_ZR7YlPfayXHVZzb4wxxJoQ_E47UDEmi";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+
+  // Telegram group links
+  const GRADE_GROUPS = {
+    "Grade 9": "https://t.me/+6xgHXIKFbEs5ZmI0",
+    "Grade 10": "https://t.me/+J4WD7a-PAixiMzQ0"
+  };
+
+
+  // Page sections
+  const homeSection = document.getElementById("homeSection");
+  const registrationSection = document.getElementById("registrationSection");
+  const paymentSection = document.getElementById("paymentSection");
+  const statusSection = document.getElementById("statusSection");
+
+  const registrationForm = document.getElementById("registrationForm");
+  const statusForm = document.getElementById("statusForm");
+
+  const registrationMessage =
+    document.getElementById("registrationMessage");
+
+  const statusMessage =
+    document.getElementById("statusMessage");
+
+  const statusResult =
+    document.getElementById("statusResult");
+
+
+  function showSection(section) {
+    [
+      homeSection,
+      registrationSection,
+      paymentSection,
+      statusSection
+    ].forEach(function(item) {
+      item.classList.add("hidden");
+    });
+
+    section.classList.remove("hidden");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+
+  function showMessage(element, message, type) {
+    element.replaceChildren();
+
+    const box = document.createElement("div");
+    box.className = "message " + type;
+    box.textContent = message;
+
+    element.appendChild(box);
+  }
+
+
+  function clearMessage(element) {
+    element.replaceChildren();
+  }
+
+
+  function normalizePhone(phone) {
+    return phone.trim().replace(/\s+/g, "");
+  }
+
+
+  function setBusy(button, busy, busyText, normalText) {
+    button.disabled = busy;
+    button.textContent = busy ? busyText : normalText;
+  }
+
+
+  // Open registration form
+  document.getElementById("startBtn").addEventListener("click", function() {
+    registrationForm.reset();
+    clearMessage(registrationMessage);
+    showSection(registrationSection);
+  });
+
+
+  // Open status checker
+  document.getElementById("openStatusBtn").addEventListener("click", function() {
+    statusForm.reset();
+    clearMessage(statusMessage);
+    statusResult.replaceChildren();
+    statusResult.classList.add("hidden");
+    showSection(statusSection);
+  });
+
+
+  // Return home
+  document.getElementById("cancelRegistrationBtn")
+    .addEventListener("click", function() {
+      showSection(homeSection);
+    });
+
+  document.getElementById("statusBackBtn")
+    .addEventListener("click", function() {
+      showSection(homeSection);
+    });
+
+
+  // Submit a new registration to Supabase
+  registrationForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const submitBtn = document.getElementById("submitBtn");
+
+    const fullName =
+      document.getElementById("fullName").value.trim();
+
+    const phone =
+      normalizePhone(document.getElementById("phone").value);
+
+    const grade =
+      document.getElementById("grade").value;
+
+    const schoolName =
+      document.getElementById("schoolName").value.trim();
+
+    const paymentMethod =
+      document.getElementById("paymentMethod").value;
+
+
+    if (
+      fullName.length < 2 ||
+      phone.length < 7 ||
+      schoolName.length < 2 ||
+      !["Grade 9", "Grade 10"].includes(grade) ||
+      !["E-Birr", "M-Pesa"].includes(paymentMethod)
+    ) {
+      showMessage(
+        registrationMessage,
+        "Please check all fields and enter valid information.",
+        "error"
+      );
+      return;
+    }
+
+
+    clearMessage(registrationMessage);
+
+    setBusy(
+      submitBtn,
+      true,
+      "Submitting registration...",
+      "SUBMIT REGISTRATION"
+    );
+
+
+    try {
+      const { data, error } = await supabaseClient.rpc(
+        "submit_registration",
+        {
+          p_full_name: fullName,
+          p_phone: phone,
+          p_grade: grade,
+          p_school_name: schoolName,
+          p_payment_method: paymentMethod
+        }
+      );
+
+
+      if (error) {
+        console.error("Registration error:", error);
+
+        throw new Error(
+          "Registration could not be saved. Please try again or contact the administrator."
+        );
+      }
+
+
+      // The SQL function returns a table, so data is an array.
+      const registration = Array.isArray(data) ? data[0] : data;
+
+      if (!registration || !registration.reference_code) {
+        throw new Error(
+          "The registration response was incomplete. Please contact the administrator before submitting again."
+        );
+      }
+
+
+      // Show the reference code and payment information only after success.
+      document.getElementById("referenceCode").textContent =
+        registration.reference_code;
+
+      document.getElementById("summaryName").textContent =
+        fullName;
+
+      document.getElementById("summaryGrade").textContent =
+        grade;
+
+
+      // Keep only the reference code in browser storage for convenience.
+      // This is not the database and does not replace the status checker.
+      try {
+        sessionStorage.setItem(
+          "keyraddiin_last_reference",
+          registration.reference_code
+        );
+      } catch (_) {
+        // Storage may be disabled; registration still succeeds.
+      }
+
+
+      showSection(paymentSection);
+
+    } catch (error) {
+      showMessage(
+        registrationMessage,
+        error.message || "An unexpected error occurred.",
+        "error"
+      );
+
+    } finally {
+      setBusy(
+        submitBtn,
+        false,
+        "Submitting registration...",
+        "SUBMIT REGISTRATION"
+      );
+    }
+  });
+
+
+  // Copy reference code
+  document.getElementById("copyReferenceBtn")
+    .addEventListener("click", async function() {
+      const reference =
+        document.getElementById("referenceCode").textContent;
+
+      try {
+        await navigator.clipboard.writeText(reference);
+        this.textContent = "COPIED!";
+      } catch (_) {
+        window.prompt("Copy your reference code:", reference);
+      }
+    });
+
+
+  // Finish registration
+  document.getElementById("paymentDoneBtn")
+    .addEventListener("click", function() {
+      showSection(homeSection);
+    });
+
+
+  // Check payment status securely using reference code + phone.
+  statusForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const checkButton =
+      document.getElementById("checkStatusSubmitBtn");
+
+    const referenceCode =
+      document.getElementById("statusReference").value.trim();
+
+    const phone =
+      normalizePhone(document.getElementById("statusPhone").value);
+
+
+    if (!referenceCode || phone.length < 7) {
+      showMessage(
+        statusMessage,
+        "Enter both your reference code and registered phone number.",
+        "error"
+      );
+      return;
+    }
+
+
+    clearMessage(statusMessage);
+    statusResult.replaceChildren();
+    statusResult.classList.add("hidden");
+
+    setBusy(
+      checkButton,
+      true,
+      "Checking...",
+      "CHECK STATUS"
+    );
+
+
+    try {
+      const { data, error } = await supabaseClient.rpc(
+        "check_registration_status",
+        {
+          p_reference_code: referenceCode,
+          p_phone: phone
+        }
+      );
+
+
+      if (error) {
+        console.error("Status check error:", error);
+
+        throw new Error(
+          "Status checking is temporarily unavailable. Please try again later."
+        );
+      }
+
+
+      const result = Array.isArray(data) ? data[0] : data;
+
+
+      if (!result) {
+        showMessage(
+          statusMessage,
+          "No matching registration was found. Check your reference code and phone number.",
+          "error"
+        );
+        return;
+      }
+
+
+      const box = document.createElement("div");
+      box.className = "status-box";
+
+      const title = document.createElement("h2");
+      title.textContent = "Registration Result";
+      box.appendChild(title);
+
+      const referenceLine = document.createElement("p");
+      referenceLine.textContent =
+        "Reference Code: " + result.reference_code;
+      box.appendChild(referenceLine);
+
+      const gradeLine = document.createElement("p");
+      gradeLine.textContent = "Grade: " + result.grade;
+      box.appendChild(gradeLine);
+
+      const statusLine = document.createElement("p");
+      statusLine.textContent =
+        "Payment Status: " + result.payment_status;
+      statusLine.style.fontWeight = "bold";
+      box.appendChild(statusLine);
+
+
+      if (result.payment_status === "Approved") {
+        const approvedMessage = document.createElement("p");
+        approvedMessage.className = "message success";
+        approvedMessage.textContent =
+          "Your payment has been approved. You can now open your grade's Telegram group.";
+        box.appendChild(approvedMessage);
+
+        const groupLink = document.createElement("a");
+        groupLink.className = "link-button telegram-btn";
+        groupLink.href = GRADE_GROUPS[result.grade];
+        groupLink.target = "_blank";
+        groupLink.rel = "noopener noreferrer";
+        groupLink.textContent = "OPEN " + result.grade.toUpperCase() + " TELEGRAM GROUP";
+        box.appendChild(groupLink);
+
+      } else if (result.payment_status === "Pending") {
+        const pendingMessage = document.createElement("p");
+        pendingMessage.className = "message";
+        pendingMessage.textContent =
+          "Your payment is still pending review. Please send your payment proof to the administrator.";
+        box.appendChild(pendingMessage);
+
+        const adminLink = document.createElement("a");
+        adminLink.className = "link-button telegram-btn";
+        adminLink.href = "https://t.me/Keyr025";
+        adminLink.target = "_blank";
+        adminLink.rel = "noopener noreferrer";
+        adminLink.textContent = "CONTACT ADMIN ON TELEGRAM";
+        box.appendChild(adminLink);
+
+      } else if (result.payment_status === "Rejected") {
+        const rejectedMessage = document.createElement("p");
+        rejectedMessage.className = "message error";
+        rejectedMessage.textContent =
+          "Your payment was not approved. Please contact the administrator for clarification.";
+        box.appendChild(rejectedMessage);
+
+        const adminLink = document.createElement("a");
+        adminLink.className = "link-button telegram-btn";
+        adminLink.href = "https://t.me/Keyr025";
+        adminLink.target = "_blank";
+        adminLink.rel = "noopener noreferrer";
+        adminLink.textContent = "CONTACT ADMIN ON TELEGRAM";
+        box.appendChild(adminLink);
+      }
+
+
+      statusResult.appendChild(box);
+      statusResult.classList.remove("hidden");
+
+    } catch (error) {
+      showMessage(
+        statusMessage,
+        error.message || "An unexpected error occurred.",
+        "error"
+      );
+
+    } finally {
+      setBusy(
+        checkButton,
+        false,
+        "Checking...",
+        "CHECK STATUS"
+      );
+    }
+  });
+
+</script>
+
+</body>
+</html>
