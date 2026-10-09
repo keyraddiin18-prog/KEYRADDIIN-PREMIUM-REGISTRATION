@@ -1,906 +1,1614 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#073b2a">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>KEYRADDIIN PREMIUM REGISTRATION</title>
+<title>KEYRADDIIN PREMIUM | Student Registration</title>
 
-  <meta
-    name="description"
-    content="KEYRADDIIN PREMIUM student registration for Grade 9 and Grade 10."
-  >
+<meta name="theme-color" content="#10102b">
+<meta name="description" content="KEYRADDIIN PREMIUM Grade 9 and Grade 10 registration portal.">
 
-  <style>
-    :root {
-      --green: #073b2a;
-      --primary: #087443;
-      --light: #e7f5ec;
-      --background: #f2f6f4;
-      --text: #1b2923;
-      --muted: #637168;
-      --border: #dce7df;
-      --white: #ffffff;
-      --red: #b42318;
-      --blue: #168bd2;
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #0b1020;
+    --panel: #151b32;
+    --panel2: #1c2340;
+    --purple: #8b5cf6;
+    --purple2: #6d28d9;
+    --teal: #2dd4bf;
+    --gold: #fbbf24;
+    --text: #f3f4ff;
+    --muted: #a6aecb;
+    --border: rgba(255,255,255,.10);
+    --danger: #fb7185;
+    --success: #34d399;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(ellipse at top left, rgba(109,40,217,.22), transparent 40%),
+        radial-gradient(ellipse at bottom right, rgba(13,148,136,.16), transparent 35%),
+        var(--bg);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    border-bottom: 1px solid var(--border);
+    background: rgba(11,16,32,.88);
+    backdrop-filter: blur(16px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-inner {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--purple), #4338ca);
+    box-shadow: 0 8px 25px rgba(139,92,246,.28);
+}
+
+.brand-name {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: .6px;
+}
+
+.brand-sub {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+}
+
+.nav-badge {
+    padding: 7px 12px;
+    border-radius: 30px;
+    border: 1px solid rgba(45,212,191,.25);
+    background: rgba(45,212,191,.08);
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* HERO */
+
+.hero {
+    padding: 64px 0 35px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border: 1px solid rgba(139,92,246,.35);
+    background: rgba(139,92,246,.10);
+    color: #c4b5fd;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 6vw, 55px);
+    font-weight: 900;
+    line-height: 1.13;
+    letter-spacing: -1.8px;
+    max-width: 780px;
+    margin: 0 auto 18px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #a78bfa, #2dd4bf, #fbbf24);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.hero-pills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.pill {
+    padding: 9px 14px;
+    border-radius: 12px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: #dbe3ff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* PAGE SECTIONS */
+
+.section {
+    padding: 30px 0 60px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: clamp(23px, 4vw, 32px);
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.step {
+    background: rgba(21,27,50,.75);
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.step-number {
+    min-width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    background: rgba(139,92,246,.17);
+    color: #c4b5fd;
+    font-weight: 900;
+}
+
+.step.active {
+    border-color: rgba(139,92,246,.65);
+    background: rgba(109,40,217,.15);
+}
+
+.step-title {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.step-desc {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* CARDS */
+
+.card {
+    background: linear-gradient(145deg, rgba(28,35,64,.96), rgba(17,23,43,.98));
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 55px rgba(0,0,0,.20);
+}
+
+.card-top {
+    padding: 25px 26px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(110deg, rgba(139,92,246,.13), rgba(45,212,191,.04));
+}
+
+.card-top h3 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.card-top p {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.card-body {
+    padding: 26px;
+}
+
+.page {
+    display: none;
+    animation: appear .35s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FORM */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 19px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #e4e7ff;
+}
+
+.required {
+    color: var(--danger);
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    pointer-events: none;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px 14px 14px 43px;
+    color: var(--text);
+    background: #0e1428;
+    border: 1px solid #303955;
+    border-radius: 12px;
+    outline: none;
+    font-size: 13px;
+    transition: .2s;
+}
+
+input:focus, select:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(139,92,246,.12);
+}
+
+input::placeholder {
+    color: #737e9f;
+}
+
+select {
+    appearance: auto;
+}
+
+select option {
+    background: #151b32;
+    color: white;
+}
+
+.help-text {
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+/* GRADE CHOICES */
+
+.grade-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.grade-option {
+    position: relative;
+}
+
+.grade-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.grade-card {
+    border: 1px solid #303955;
+    border-radius: 16px;
+    padding: 18px 12px;
+    background: #10162a;
+    text-align: center;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.grade-card:hover {
+    border-color: var(--purple);
+    transform: translateY(-2px);
+}
+
+.grade-option input:checked + .grade-card {
+    border-color: var(--teal);
+    background: linear-gradient(135deg, rgba(45,212,191,.13), rgba(139,92,246,.12));
+    box-shadow: 0 0 0 2px rgba(45,212,191,.08);
+}
+
+.grade-icon {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.grade-title {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.grade-sub {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+/* FEE */
+
+.fee-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid rgba(251,191,36,.27);
+    border-radius: 15px;
+    background: rgba(251,191,36,.06);
+    margin-top: 22px;
+}
+
+.fee-label {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.fee-note {
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.fee-price {
+    color: var(--gold);
+    font-size: 26px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+/* BUTTONS */
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 12px;
+    font-weight: 900;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: .2s;
+    min-height: 48px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.btn-primary {
+    color: white;
+    background: linear-gradient(100deg, #7c3aed, #5b21b6);
+    box-shadow: 0 9px 25px rgba(109,40,217,.22);
+}
+
+.btn-teal {
+    color: #062a29;
+    background: linear-gradient(100deg, #5eead4, #2dd4bf);
+}
+
+.btn-outline {
+    background: #10162a;
+    border: 1px solid #303955;
+    color: #e5e7ff;
+}
+
+.button-row .btn {
+    flex: 1;
+}
+
+.btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* PAYMENT PAGE */
+
+.reference-box {
+    padding: 18px;
+    border-radius: 16px;
+    background: linear-gradient(110deg, rgba(139,92,246,.17), rgba(45,212,191,.08));
+    border: 1px solid rgba(139,92,246,.35);
+    margin-bottom: 23px;
+}
+
+.reference-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.reference-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #c4b5fd;
+}
+
+.status-tag {
+    border-radius: 30px;
+    padding: 5px 9px;
+    background: rgba(251,191,36,.10);
+    border: 1px solid rgba(251,191,36,.25);
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.reference-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.reference-code strong {
+    font-size: clamp(18px, 4vw, 25px);
+    letter-spacing: 1.5px;
+    color: var(--teal);
+    overflow-wrap: anywhere;
+}
+
+.copy-btn {
+    border: 1px solid rgba(45,212,191,.3);
+    border-radius: 9px;
+    padding: 8px 12px;
+    background: rgba(45,212,191,.08);
+    color: var(--teal);
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.reference-help {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* PAYMENT METHOD CARDS */
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 23px;
+}
+
+.payment-card {
+    border: 1px solid #303955;
+    border-radius: 18px;
+    padding: 20px;
+    background: linear-gradient(145deg, #171e36, #10162a);
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-card.ebirr {
+    border-top: 3px solid #2dd4bf;
+}
+
+.payment-card.mpesa {
+    border-top: 3px solid #fb923c;
+}
+
+.payment-heading {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 17px;
+}
+
+.payment-logo {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    font-size: 22px;
+    background: rgba(45,212,191,.12);
+}
+
+.mpesa .payment-logo {
+    background: rgba(251,146,60,.12);
+}
+
+.payment-heading h4 {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.payment-heading p {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.account-label {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 13px;
+}
+
+.account-number {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    overflow-wrap: anywhere;
+    margin-top: 2px;
+}
+
+.ebirr .account-number {
+    color: var(--teal);
+}
+
+.mpesa .account-number {
+    color: #fdba74;
+}
+
+.account-name {
+    font-size: 12px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.copy-account {
+    margin-top: 14px;
+    border: 1px solid var(--border);
+    background: #0c1225;
+    color: #dce2ff;
+    border-radius: 9px;
+    padding: 9px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    width: 100%;
+}
+
+.payment-warning {
+    border: 1px solid rgba(251,191,36,.24);
+    border-radius: 13px;
+    padding: 14px;
+    color: #f7dca0;
+    background: rgba(251,191,36,.06);
+    font-size: 11px;
+    margin-bottom: 22px;
+}
+
+.payment-warning strong {
+    color: var(--gold);
+}
+
+/* PAYMENT FORM */
+
+.payment-form {
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: rgba(11,16,32,.40);
+}
+
+.payment-form h4 {
+    font-size: 15px;
+    margin-bottom: 17px;
+}
+
+.method-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.method-option {
+    position: relative;
+}
+
+.method-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.method-label {
+    display: block;
+    padding: 13px;
+    border-radius: 11px;
+    text-align: center;
+    background: #10162a;
+    border: 1px solid #303955;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.method-option input:checked + .method-label {
+    border-color: var(--teal);
+    background: rgba(45,212,191,.08);
+    color: var(--teal);
+}
+
+.confirmation {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 17px;
+}
+
+.confirmation input {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: var(--teal);
+    flex-shrink: 0;
+}
+
+/* SUCCESS / NOTICE */
+
+.notice {
+    border-radius: 12px;
+    padding: 13px 15px;
+    font-size: 11px;
+    margin-top: 15px;
+    display: none;
+}
+
+.notice.show {
+    display: block;
+}
+
+.notice.error {
+    border: 1px solid rgba(251,113,133,.3);
+    background: rgba(251,113,133,.08);
+    color: #fda4af;
+}
+
+.notice.success {
+    border: 1px solid rgba(52,211,153,.3);
+    background: rgba(52,211,153,.08);
+    color: #6ee7b7;
+}
+
+.telegram-info {
+    margin-top: 20px;
+    border: 1px solid rgba(45,212,191,.25);
+    background: rgba(45,212,191,.06);
+    border-radius: 15px;
+    padding: 17px;
+}
+
+.telegram-info h4 {
+    color: var(--teal);
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.telegram-info p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.telegram-info ul {
+    padding-left: 19px;
+    margin-top: 9px;
+    color: #d8e1f9;
+    font-size: 11px;
+}
+
+.telegram-info li {
+    margin: 4px 0;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 27px 0;
+    text-align: center;
+    background: rgba(8,12,25,.45);
+}
+
+.footer-brand {
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+footer p {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.footer-dot {
+    color: var(--teal);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .hero {
+        padding: 44px 0 25px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    .hero h1 {
+        letter-spacing: -1px;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--background);
-      color: var(--text);
-      line-height: 1.6;
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 
-    header {
-      background: linear-gradient(135deg, #073b2a, #087443);
-      color: white;
-      text-align: center;
-      padding: 32px 15px;
+    .step {
+        padding: 11px 13px;
     }
 
-    header h1 {
-      font-size: clamp(22px, 5vw, 30px);
-      margin-bottom: 6px;
-    }
-
-    header p {
-      font-size: 14px;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 650px;
-      margin: 24px auto;
+    .step-desc {
+        font-size: 10px;
     }
 
     .card {
-      background: var(--white);
-      padding: 22px;
-      margin-bottom: 20px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        border-radius: 18px;
     }
 
-    h2 {
-      color: var(--green);
-      font-size: 21px;
-      margin-bottom: 12px;
+    .card-top {
+        padding: 21px 18px;
     }
 
-    p {
-      margin-bottom: 8px;
+    .card-body {
+        padding: 19px 15px;
     }
 
-    .hero {
-      text-align: center;
-      padding-top: 30px;
-      padding-bottom: 30px;
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    .hero-icon {
-      font-size: 48px;
-      margin-bottom: 10px;
+    .form-group.full {
+        grid-column: auto;
     }
 
-    .price {
-      background: var(--light);
-      border: 1px solid #b9dfc7;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 18px 0;
+    .payment-grid {
+        grid-template-columns: 1fr;
     }
 
-    .price strong {
-      display: block;
-      color: var(--primary);
-      font-size: 28px;
+    .button-row {
+        flex-direction: column;
     }
 
-    .field {
-      margin: 16px 0;
+    .button-row .btn {
+        width: 100%;
     }
 
-    label {
-      display: block;
-      color: var(--green);
-      font-weight: bold;
-      margin-bottom: 6px;
+    .fee-price {
+        font-size: 23px;
     }
 
-    input,
-    select {
-      display: block;
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #cbd8cf;
-      border-radius: 8px;
-      font-size: 16px;
-      background: white;
+    .reference-code {
+        align-items: flex-start;
     }
 
-    input:focus,
-    select:focus {
-      outline: 2px solid #b9dfc7;
-      border-color: var(--primary);
+    .nav-inner {
+        min-height: 68px;
     }
 
-    button,
-    .link-button {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 9px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      margin-top: 14px;
+    .brand-name {
+        font-size: 13px;
     }
 
-    .primary-btn {
-      background: var(--primary);
-      color: white;
+    .nav-badge {
+        font-size: 9px;
+        padding: 6px 9px;
+    }
+}
+
+@media (max-width: 360px) {
+    .grade-options,
+    .method-options {
+        grid-template-columns: 1fr;
     }
 
-    .primary-btn:hover {
-      background: #065b34;
+    .brand-sub {
+        letter-spacing: .8px;
     }
-
-    .secondary-btn {
-      background: #e9efeb;
-      color: var(--green);
-    }
-
-    .telegram-btn {
-      background: var(--blue);
-      color: white;
-    }
-
-    button:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    .payment {
-      padding: 14px;
-      margin: 12px 0;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      background: #f7faf8;
-      overflow-wrap: anywhere;
-    }
-
-    .payment strong {
-      color: var(--green);
-    }
-
-    .notice {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 12px;
-    }
-
-    .message {
-      padding: 13px;
-      margin: 14px 0;
-      border-radius: 8px;
-      overflow-wrap: anywhere;
-    }
-
-    .success {
-      color: #075d35;
-      background: #e7f5ec;
-      border: 1px solid #b9dfc7;
-    }
-
-    .error {
-      color: var(--red);
-      background: #fff0ef;
-      border: 1px solid #f3c5c1;
-    }
-
-    .status-box {
-      padding: 15px;
-      margin-top: 14px;
-      border-radius: 9px;
-      background: var(--light);
-      overflow-wrap: anywhere;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    footer {
-      text-align: center;
-      padding: 22px 15px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    @media (max-width: 420px) {
-      .card {
-        padding: 18px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>KEYRADDIIN PREMIUM</h1>
-  <p>STUDENT REGISTRATION CENTER</p>
-  <p>Grade 9 &amp; Grade 10</p>
+<!-- NAVIGATION -->
+<nav>
+    <div class="container nav-inner">
+        <a class="brand" href="#" aria-label="KEYRADDIIN PREMIUM Home">
+            <div class="logo">✦</div>
+            <div>
+                <div class="brand-name">KEYRADDIIN</div>
+                <div class="brand-sub">PREMIUM REGISTRATION</div>
+            </div>
+        </a>
+
+        <div class="nav-badge">● REGISTRATION OPEN</div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="container">
+        <div class="eyebrow">🎓 STUDENT REGISTRATION PORTAL</div>
+
+        <h1>
+            Your Education.<br>
+            <span class="gradient-text">Your Next Level.</span>
+        </h1>
+
+        <p>
+            Welcome to KEYRADDIIN PREMIUM. Register for Grade 9 or Grade 10,
+            complete your payment, and submit your payment proof for review.
+        </p>
+
+        <div class="hero-pills">
+            <div class="pill">🎓 Grade 9 & Grade 10</div>
+            <div class="pill">💳 50 ETB Registration Fee</div>
+            <div class="pill">🔐 Unique Reference Code</div>
+        </div>
+    </div>
 </header>
 
-<main class="container">
+<!-- REGISTRATION -->
+<main class="section">
+<div class="container">
 
-  <!-- HOME -->
-  <section class="card hero" id="homeSection">
-
-    <div class="hero-icon">🎓</div>
-
-    <h2>Welcome, Students!</h2>
-
-    <p>
-      Register for KEYRADDIIN PREMIUM educational support,
-      study groups, and learning opportunities.
-    </p>
-
-    <div class="price">
-      Registration Fee
-      <strong>50 ETB</strong>
-      <span>Grade 9 and Grade 10</span>
+    <div class="section-heading">
+        <h2>Start Your <span class="gradient-text">Registration</span></h2>
+        <p>Follow the steps below to complete your registration.</p>
     </div>
 
-    <button class="primary-btn" id="startBtn" type="button">
-      📝 REGISTER NOW
-    </button>
+    <div class="steps">
+        <div class="step active" id="step1">
+            <div class="step-number">01</div>
+            <div>
+                <div class="step-title">Student Information</div>
+                <div class="step-desc">Enter your details</div>
+            </div>
+        </div>
 
-    <button class="secondary-btn" id="openStatusBtn" type="button">
-      🔎 CHECK REGISTRATION STATUS
-    </button>
+        <div class="step" id="step2">
+            <div class="step-number">02</div>
+            <div>
+                <div class="step-title">Payment Information</div>
+                <div class="step-desc">Pay 50 ETB</div>
+            </div>
+        </div>
 
-    <p class="notice">
-      Payment information appears after your registration
-      has been submitted successfully.
-    </p>
-
-  </section>
-
-
-  <!-- REGISTRATION FORM -->
-  <section class="card hidden" id="registrationSection">
-
-    <h2>Student Registration</h2>
-
-    <p>Please enter your correct information.</p>
-
-    <form id="registrationForm">
-
-      <div class="field">
-        <label for="fullName">Full Name</label>
-        <input
-          id="fullName"
-          type="text"
-          maxlength="100"
-          autocomplete="name"
-          placeholder="Enter your full name"
-          required>
-      </div>
-
-      <div class="field">
-        <label for="phone">Phone Number</label>
-        <input
-          id="phone"
-          type="tel"
-          maxlength="20"
-          autocomplete="tel"
-          placeholder="Enter your phone number"
-          required>
-      </div>
-
-      <div class="field">
-        <label for="grade">Choose Grade</label>
-        <select id="grade" required>
-          <option value="">-- Select grade --</option>
-          <option value="Grade 9">Grade 9</option>
-          <option value="Grade 10">Grade 10</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="schoolName">School Name</label>
-        <input
-          id="schoolName"
-          type="text"
-          maxlength="150"
-          placeholder="Enter your school name"
-          required>
-      </div>
-
-      <div class="field">
-        <label for="paymentMethod">Payment Method</label>
-        <select id="paymentMethod" required>
-          <option value="">-- Select payment method --</option>
-          <option value="E-Birr">E-Birr</option>
-          <option value="M-Pesa">M-Pesa</option>
-        </select>
-      </div>
-
-      <div id="registrationMessage" aria-live="polite"></div>
-
-      <button class="primary-btn" id="submitBtn" type="submit">
-        SUBMIT REGISTRATION
-      </button>
-
-      <button class="secondary-btn" id="cancelRegistrationBtn" type="button">
-        ← BACK TO HOME
-      </button>
-
-    </form>
-
-    <p class="notice">
-      Submitting this form creates a registration record.
-      Your payment will remain Pending until an administrator
-      verifies it.
-    </p>
-
-  </section>
-
-
-  <!-- REGISTRATION SUCCESS AND PAYMENT -->
-  <section class="card hidden" id="paymentSection">
-
-    <h2>Registration Submitted!</h2>
-
-    <div class="message success">
-      Your registration has been saved successfully.
-      Keep your reference code safe.
+        <div class="step" id="step3">
+            <div class="step-number">03</div>
+            <div>
+                <div class="step-title">Submit Payment Proof</div>
+                <div class="step-desc">Send to Telegram admin</div>
+            </div>
+        </div>
     </div>
 
-    <div class="status-box">
-      <p><strong>Reference Code:</strong></p>
-      <p id="referenceCode" style="font-size:22px;font-weight:bold;"></p>
+    <div class="card">
 
-      <button class="secondary-btn" id="copyReferenceBtn" type="button">
-        COPY REFERENCE CODE
-      </button>
+        <!-- PAGE 1 -->
+        <section class="page active" id="registrationPage">
 
-      <p><strong>Student:</strong> <span id="summaryName"></span></p>
-      <p><strong>Grade:</strong> <span id="summaryGrade"></span></p>
-      <p><strong>Payment Status:</strong> Pending</p>
+            <div class="card-top">
+                <h3>📝 Student Registration</h3>
+                <p>Complete every required field carefully.</p>
+            </div>
+
+            <div class="card-body">
+
+                <form id="registrationForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="fullName">
+                                Full Name <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <span class="input-icon">👤</span>
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    placeholder="Enter your full name"
+                                    maxlength="100"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">
+                                Phone Number <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <span class="input-icon">📱</span>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    placeholder="e.g. 09XXXXXXXX"
+                                    maxlength="20"
+                                    autocomplete="tel"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="school">
+                                School Name <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <span class="input-icon">🏫</span>
+                                <input
+                                    type="text"
+                                    id="school"
+                                    placeholder="Enter your school name"
+                                    maxlength="120"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group full">
+                            <label>
+                                Select Your Grade <span class="required">*</span>
+                            </label>
+
+                            <div class="grade-options">
+
+                                <label class="grade-option">
+                                    <input
+                                        type="radio"
+                                        name="grade"
+                                        value="Grade 9"
+                                        required
+                                    >
+                                    <div class="grade-card">
+                                        <div class="grade-icon">📘</div>
+                                        <div class="grade-title">Grade 9</div>
+                                        <div class="grade-sub">Register for Grade 9</div>
+                                    </div>
+                                </label>
+
+                                <label class="grade-option">
+                                    <input
+                                        type="radio"
+                                        name="grade"
+                                        value="Grade 10"
+                                        required
+                                    >
+                                    <div class="grade-card">
+                                        <div class="grade-icon">📚</div>
+                                        <div class="grade-title">Grade 10</div>
+                                        <div class="grade-sub">Register for Grade 10</div>
+                                    </div>
+                                </label>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="fee-box">
+                        <div>
+                            <div class="fee-label">Registration Fee</div>
+                            <div class="fee-note">One-time registration payment</div>
+                        </div>
+                        <div class="fee-price">50 ETB</div>
+                    </div>
+
+                    <div class="notice error" id="formError" role="alert"></div>
+
+                    <div class="button-row">
+                        <button type="submit" class="btn btn-primary">
+                            Continue to Payment <span>→</span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- PAGE 2 -->
+        <section class="page" id="paymentPage">
+
+            <div class="card-top">
+                <h3>💳 Payment Information</h3>
+                <p>Check both payment accounts below and pay 50 ETB using one of the available methods.</p>
+            </div>
+
+            <div class="card-body">
+
+                <div class="reference-box">
+                    <div class="reference-top">
+                        <div class="reference-label">🔢 YOUR UNIQUE REFERENCE CODE</div>
+                        <div class="status-tag">PENDING REVIEW</div>
+                    </div>
+
+                    <div class="reference-code">
+                        <strong id="referenceCode">KR-LOADING</strong>
+                        <button type="button" class="copy-btn" id="copyReference">
+                            COPY CODE
+                        </button>
+                    </div>
+
+                    <div class="reference-help">
+                        Keep this code. Include it in your payment and Telegram message.
+                    </div>
+                </div>
+
+                <div class="payment-grid">
+
+                    <!-- E-BIRR -->
+                    <div class="payment-card ebirr">
+
+                        <div class="payment-heading">
+                            <div class="payment-logo">📲</div>
+                            <div>
+                                <h4>E-Birr</h4>
+                                <p>Electronic payment</p>
+                            </div>
+                        </div>
+
+                        <div class="account-label">E-Birr Account Number</div>
+                        <div class="account-number" id="ebirrNumber">
+                            0995555866
+                        </div>
+
+                        <div class="account-label">Account Holder Name</div>
+                        <div class="account-name">
+                            Keyraddiin Abdella Jibraill
+                        </div>
+
+                        <button
+                            type="button"
+                            class="copy-account"
+                            data-copy="0995555866"
+                        >
+                            📋 Copy E-Birr Number
+                        </button>
+
+                    </div>
+
+                    <!-- M-PESA -->
+                    <div class="payment-card mpesa">
+
+                        <div class="payment-heading">
+                            <div class="payment-logo">💸</div>
+                            <div>
+                                <h4>M-Pesa</h4>
+                                <p>Mobile money payment</p>
+                            </div>
+                        </div>
+
+                        <div class="account-label">M-Pesa Account Number</div>
+                        <div class="account-number" id="mpesaNumber">
+                            0799574155
+                        </div>
+
+                        <div class="account-label">Account Holder Name</div>
+                        <div class="account-name">
+                            Abdella Jibraill Ahmed
+                        </div>
+
+                        <button
+                            type="button"
+                            class="copy-account"
+                            data-copy="0799574155"
+                        >
+                            📋 Copy M-Pesa Number
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="payment-warning">
+                    ⚠️ <strong>Important:</strong> Registration costs 50 ETB.
+                    Before confirming payment, carefully check the account number
+                    and account holder name. Keep your payment receipt.
+                </div>
+
+                <div class="payment-form">
+
+                    <h4>Choose Your Payment Method</h4>
+
+                    <div class="method-options">
+
+                        <label class="method-option">
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="E-Birr"
+                                required
+                            >
+                            <span class="method-label">📲 E-Birr</span>
+                        </label>
+
+                        <label class="method-option">
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="M-Pesa"
+                                required
+                            >
+                            <span class="method-label">💸 M-Pesa</span>
+                        </label>
+
+                    </div>
+
+                    <label class="confirmation">
+                        <input type="checkbox" id="paymentConfirmed">
+                        <span>
+                            I have made the 50 ETB payment and will send my payment
+                            receipt or screenshot to the Telegram admin.
+                        </span>
+                    </label>
+
+                    <div class="notice error" id="paymentError" role="alert"></div>
+
+                    <div class="button-row">
+                        <button type="button" class="btn btn-outline" id="backButton">
+                            ← Back
+                        </button>
+
+                        <button type="button" class="btn btn-teal" id="telegramButton">
+                            Send Proof to Telegram ↗
+                        </button>
+                    </div>
+
+                    <div class="telegram-info">
+                        <h4>📩 What happens next?</h4>
+                        <p>
+                            Your Telegram message will be prepared with your
+                            registration details and reference code.
+                        </p>
+
+                        <ul>
+                            <li>Open Telegram and review the prepared message.</li>
+                            <li>Attach your payment receipt screenshot manually.</li>
+                            <li>Send the message to the admin.</li>
+                            <li>The admin checks your proof and decides Approved or Rejected.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     </div>
-
-    <h2 style="margin-top:22px;">Payment Information</h2>
-
-    <p>Registration fee: <strong>50 ETB</strong></p>
-
-    <div class="payment">
-      <strong>E-Birr</strong>
-      <p>Payment Number: <strong>0995555866</strong></p>
-      <p>Account Name: Keyraddiin Abdella Jibraill</p>
-    </div>
-
-    <div class="payment">
-      <strong>M-Pesa</strong>
-      <p>Payment Number: <strong>0799574155</strong></p>
-      <p>Account Name: Abdella Jibraill Ahmed</p>
-    </div>
-
-    <p class="notice">
-      Carefully check the account name and number before paying.
-      After payment, contact the administrator on Telegram
-      and send your payment proof along with your reference code.
-    </p>
-
-    <a
-      class="link-button telegram-btn"
-      href="https://t.me/Keyr025"
-      target="_blank"
-      rel="noopener noreferrer">
-      📩 SEND PAYMENT PROOF TO ADMIN
-    </a>
-
-    <button class="primary-btn" id="paymentDoneBtn" type="button">
-      FINISH
-    </button>
-
-  </section>
-
-
-  <!-- CHECK STATUS -->
-  <section class="card hidden" id="statusSection">
-
-    <h2>Check Registration Status</h2>
-
-    <p>Enter the reference code you received after registration.</p>
-
-    <form id="statusForm">
-
-      <div class="field">
-        <label for="statusReference">Reference Code</label>
-        <input
-          id="statusReference"
-          type="text"
-          maxlength="20"
-          placeholder="Enter your reference code"
-          required>
-      </div>
-
-      <div class="field">
-        <label for="statusPhone">Phone Number Used for Registration</label>
-        <input
-          id="statusPhone"
-          type="tel"
-          maxlength="20"
-          placeholder="Enter your phone number"
-          required>
-      </div>
-
-      <div id="statusMessage" aria-live="polite"></div>
-
-      <button class="primary-btn" id="checkStatusSubmitBtn" type="submit">
-        CHECK STATUS
-      </button>
-
-    </form>
-
-    <div id="statusResult" class="hidden"></div>
-
-    <button class="secondary-btn" id="statusBackBtn" type="button">
-      ← BACK TO HOME
-    </button>
-
-  </section>
-
+</div>
 </main>
 
 <footer>
-  &copy; 2026 KEYRADDIIN PREMIUM REGISTRATION
-  <br>
-  Educational Support for Students
+    <div class="container">
+        <div class="footer-brand">
+            KEYRADDIIN <span class="footer-dot">PREMIUM</span>
+        </div>
+        <p>Student Registration Portal • Grade 9 & Grade 10</p>
+        <p>© <span id="year"></span> KEYRADDIIN MEDIA. All rights reserved.</p>
+    </div>
 </footer>
 
-
-<!-- Supabase JavaScript library -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <script>
-  "use strict";
+"use strict";
 
-  /*
-   * SUPABASE PROJECT CONFIGURATION
-   * The publishable key is intended for frontend use.
-   * Never put a service_role or secret key in this file.
-   */
-  const SUPABASE_URL =
-    "https://ddclqmfeseppltibkwzx.supabase.co";
+/*
+=========================================================
+KEYRADDIIN PREMIUM REGISTRATION
+Payment: 50 ETB
+Payment methods: E-Birr / M-Pesa
+Telegram admin: @Keyr025
+Backend / Supabase: NOT USED
+=========================================================
 
-  const SUPABASE_PUBLISHABLE_KEY =
-    "sb_publishable_ZR7YlPfayXHVZzb4wxxJoQ_E47UDEmi";
+Important:
+This static website does not save registrations to a server.
+The reference code is generated in the browser.
+The student must manually attach and send payment proof.
+Approval and rejection are handled manually by the admin.
+*/
 
-  const supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY
-  );
+const TELEGRAM_USERNAME = "Keyr025";
+const REGISTRATION_FEE = 50;
 
+const registrationForm = document.getElementById("registrationForm");
+const registrationPage = document.getElementById("registrationPage");
+const paymentPage = document.getElementById("paymentPage");
 
-  // Telegram group links
-  const GRADE_GROUPS = {
-    "Grade 9": "https://t.me/+6xgHXIKFbEs5ZmI0",
-    "Grade 10": "https://t.me/+J4WD7a-PAixiMzQ0"
-  };
+const formError = document.getElementById("formError");
+const paymentError = document.getElementById("paymentError");
 
+let currentRegistration = null;
 
-  // Page sections
-  const homeSection = document.getElementById("homeSection");
-  const registrationSection = document.getElementById("registrationSection");
-  const paymentSection = document.getElementById("paymentSection");
-  const statusSection = document.getElementById("statusSection");
+/* GENERATE A REFERENCE CODE */
 
-  const registrationForm = document.getElementById("registrationForm");
-  const statusForm = document.getElementById("statusForm");
+function generateReferenceCode() {
+    const now = new Date();
 
-  const registrationMessage =
-    document.getElementById("registrationMessage");
+    const datePart =
+        now.getFullYear().toString().slice(-2) +
+        String(now.getMonth() + 1).padStart(2, "0") +
+        String(now.getDate()).padStart(2, "0");
 
-  const statusMessage =
-    document.getElementById("statusMessage");
+    const randomPart = Math.random()
+        .toString(36)
+        .substring(2, 8)
+        .toUpperCase();
 
-  const statusResult =
-    document.getElementById("statusResult");
+    return `KR-${datePart}-${randomPart}`;
+}
 
+/* SHOW NOTICE */
 
-  function showSection(section) {
-    [
-      homeSection,
-      registrationSection,
-      paymentSection,
-      statusSection
-    ].forEach(function(item) {
-      item.classList.add("hidden");
-    });
+function showNotice(element, message, type = "error") {
+    element.textContent = message;
+    element.className = `notice show ${type}`;
+}
 
-    section.classList.remove("hidden");
+/* HIDE NOTICE */
+
+function hideNotice(element) {
+    element.textContent = "";
+    element.className = "notice";
+}
+
+/* SWITCH PAGES */
+
+function showPaymentPage() {
+    registrationPage.classList.remove("active");
+    paymentPage.classList.add("active");
+
+    document.getElementById("step1").classList.remove("active");
+    document.getElementById("step2").classList.add("active");
 
     window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+        top: document.querySelector(".section").offsetTop - 70,
+        behavior: "smooth"
     });
-  }
+}
 
+function showRegistrationPage() {
+    paymentPage.classList.remove("active");
+    registrationPage.classList.add("active");
 
-  function showMessage(element, message, type) {
-    element.replaceChildren();
+    document.getElementById("step2").classList.remove("active");
+    document.getElementById("step1").classList.add("active");
 
-    const box = document.createElement("div");
-    box.className = "message " + type;
-    box.textContent = message;
-
-    element.appendChild(box);
-  }
-
-
-  function clearMessage(element) {
-    element.replaceChildren();
-  }
-
-
-  function normalizePhone(phone) {
-    return phone.trim().replace(/\s+/g, "");
-  }
-
-
-  function setBusy(button, busy, busyText, normalText) {
-    button.disabled = busy;
-    button.textContent = busy ? busyText : normalText;
-  }
-
-
-  // Open registration form
-  document.getElementById("startBtn").addEventListener("click", function() {
-    registrationForm.reset();
-    clearMessage(registrationMessage);
-    showSection(registrationSection);
-  });
-
-
-  // Open status checker
-  document.getElementById("openStatusBtn").addEventListener("click", function() {
-    statusForm.reset();
-    clearMessage(statusMessage);
-    statusResult.replaceChildren();
-    statusResult.classList.add("hidden");
-    showSection(statusSection);
-  });
-
-
-  // Return home
-  document.getElementById("cancelRegistrationBtn")
-    .addEventListener("click", function() {
-      showSection(homeSection);
+    window.scrollTo({
+        top: document.querySelector(".section").offsetTop - 70,
+        behavior: "smooth"
     });
+}
 
-  document.getElementById("statusBackBtn")
-    .addEventListener("click", function() {
-      showSection(homeSection);
-    });
+/* STEP 1: REGISTRATION */
 
-
-  // Submit a new registration to Supabase
-  registrationForm.addEventListener("submit", async function(event) {
+registrationForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const submitBtn = document.getElementById("submitBtn");
+    hideNotice(formError);
 
-    const fullName =
-      document.getElementById("fullName").value.trim();
+    const fullName = document.getElementById("fullName").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const school = document.getElementById("school").value.trim();
 
-    const phone =
-      normalizePhone(document.getElementById("phone").value);
-
-    const grade =
-      document.getElementById("grade").value;
-
-    const schoolName =
-      document.getElementById("schoolName").value.trim();
-
-    const paymentMethod =
-      document.getElementById("paymentMethod").value;
-
-
-    if (
-      fullName.length < 2 ||
-      phone.length < 7 ||
-      schoolName.length < 2 ||
-      !["Grade 9", "Grade 10"].includes(grade) ||
-      !["E-Birr", "M-Pesa"].includes(paymentMethod)
-    ) {
-      showMessage(
-        registrationMessage,
-        "Please check all fields and enter valid information.",
-        "error"
-      );
-      return;
-    }
-
-
-    clearMessage(registrationMessage);
-
-    setBusy(
-      submitBtn,
-      true,
-      "Submitting registration...",
-      "SUBMIT REGISTRATION"
+    const gradeElement = document.querySelector(
+        'input[name="grade"]:checked'
     );
 
-
-    try {
-      const { data, error } = await supabaseClient.rpc(
-        "submit_registration",
-        {
-          p_full_name: fullName,
-          p_phone: phone,
-          p_grade: grade,
-          p_school_name: schoolName,
-          p_payment_method: paymentMethod
-        }
-      );
-
-
-      if (error) {
-        console.error("Registration error:", error);
-
-        throw new Error(
-          "Registration could not be saved. Please try again or contact the administrator."
-        );
-      }
-
-
-      // The SQL function returns a table, so data is an array.
-      const registration = Array.isArray(data) ? data[0] : data;
-
-      if (!registration || !registration.reference_code) {
-        throw new Error(
-          "The registration response was incomplete. Please contact the administrator before submitting again."
-        );
-      }
-
-
-      // Show the reference code and payment information only after success.
-      document.getElementById("referenceCode").textContent =
-        registration.reference_code;
-
-      document.getElementById("summaryName").textContent =
-        fullName;
-
-      document.getElementById("summaryGrade").textContent =
-        grade;
-
-
-      // Keep only the reference code in browser storage for convenience.
-      // This is not the database and does not replace the status checker.
-      try {
-        sessionStorage.setItem(
-          "keyraddiin_last_reference",
-          registration.reference_code
-        );
-      } catch (_) {
-        // Storage may be disabled; registration still succeeds.
-      }
-
-
-      showSection(paymentSection);
-
-    } catch (error) {
-      showMessage(
-        registrationMessage,
-        error.message || "An unexpected error occurred.",
-        "error"
-      );
-
-    } finally {
-      setBusy(
-        submitBtn,
-        false,
-        "Submitting registration...",
-        "SUBMIT REGISTRATION"
-      );
-    }
-  });
-
-
-  // Copy reference code
-  document.getElementById("copyReferenceBtn")
-    .addEventListener("click", async function() {
-      const reference =
-        document.getElementById("referenceCode").textContent;
-
-      try {
-        await navigator.clipboard.writeText(reference);
-        this.textContent = "COPIED!";
-      } catch (_) {
-        window.prompt("Copy your reference code:", reference);
-      }
-    });
-
-
-  // Finish registration
-  document.getElementById("paymentDoneBtn")
-    .addEventListener("click", function() {
-      showSection(homeSection);
-    });
-
-
-  // Check payment status securely using reference code + phone.
-  statusForm.addEventListener("submit", async function(event) {
-    event.preventDefault();
-
-    const checkButton =
-      document.getElementById("checkStatusSubmitBtn");
-
-    const referenceCode =
-      document.getElementById("statusReference").value.trim();
-
-    const phone =
-      normalizePhone(document.getElementById("statusPhone").value);
-
-
-    if (!referenceCode || phone.length < 7) {
-      showMessage(
-        statusMessage,
-        "Enter both your reference code and registered phone number.",
-        "error"
-      );
-      return;
-    }
-
-
-    clearMessage(statusMessage);
-    statusResult.replaceChildren();
-    statusResult.classList.add("hidden");
-
-    setBusy(
-      checkButton,
-      true,
-      "Checking...",
-      "CHECK STATUS"
-    );
-
-
-    try {
-      const { data, error } = await supabaseClient.rpc(
-        "check_registration_status",
-        {
-          p_reference_code: referenceCode,
-          p_phone: phone
-        }
-      );
-
-
-      if (error) {
-        console.error("Status check error:", error);
-
-        throw new Error(
-          "Status checking is temporarily unavailable. Please try again later."
-        );
-      }
-
-
-      const result = Array.isArray(data) ? data[0] : data;
-
-
-      if (!result) {
-        showMessage(
-          statusMessage,
-          "No matching registration was found. Check your reference code and phone number.",
-          "error"
+    if (!fullName || !phone || !school || !gradeElement) {
+        showNotice(
+            formError,
+            "Please complete all required fields before continuing."
         );
         return;
-      }
+    }
 
+    if (fullName.length < 3) {
+        showNotice(formError, "Please enter your full name.");
+        return;
+    }
 
-      const box = document.createElement("div");
-      box.className = "status-box";
+    if (phone.replace(/\D/g, "").length < 9) {
+        showNotice(formError, "Please enter a valid phone number.");
+        return;
+    }
 
-      const title = document.createElement("h2");
-      title.textContent = "Registration Result";
-      box.appendChild(title);
+    currentRegistration = {
+        fullName: fullName,
+        phone: phone,
+        school: school,
+        grade: gradeElement.value,
+        reference: generateReferenceCode(),
+        fee: REGISTRATION_FEE
+    };
 
-      const referenceLine = document.createElement("p");
-      referenceLine.textContent =
-        "Reference Code: " + result.reference_code;
-      box.appendChild(referenceLine);
+    document.getElementById("referenceCode").textContent =
+        currentRegistration.reference;
 
-      const gradeLine = document.createElement("p");
-      gradeLine.textContent = "Grade: " + result.grade;
-      box.appendChild(gradeLine);
+    showPaymentPage();
+});
 
-      const statusLine = document.createElement("p");
-      statusLine.textContent =
-        "Payment Status: " + result.payment_status;
-      statusLine.style.fontWeight = "bold";
-      box.appendChild(statusLine);
+/* COPY TEXT */
 
+async function copyText(text, button, originalText) {
+    try {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+        } else {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.opacity = "0";
 
-      if (result.payment_status === "Approved") {
-        const approvedMessage = document.createElement("p");
-        approvedMessage.className = "message success";
-        approvedMessage.textContent =
-          "Your payment has been approved. You can now open your grade's Telegram group.";
-        box.appendChild(approvedMessage);
+            document.body.appendChild(textArea);
+            textArea.select();
 
-        const groupLink = document.createElement("a");
-        groupLink.className = "link-button telegram-btn";
-        groupLink.href = GRADE_GROUPS[result.grade];
-        groupLink.target = "_blank";
-        groupLink.rel = "noopener noreferrer";
-        groupLink.textContent = "OPEN " + result.grade.toUpperCase() + " TELEGRAM GROUP";
-        box.appendChild(groupLink);
+            const copied = document.execCommand("copy");
+            textArea.remove();
 
-      } else if (result.payment_status === "Pending") {
-        const pendingMessage = document.createElement("p");
-        pendingMessage.className = "message";
-        pendingMessage.textContent =
-          "Your payment is still pending review. Please send your payment proof to the administrator.";
-        box.appendChild(pendingMessage);
+            if (!copied) {
+                throw new Error("Copy failed");
+            }
+        }
 
-        const adminLink = document.createElement("a");
-        adminLink.className = "link-button telegram-btn";
-        adminLink.href = "https://t.me/Keyr025";
-        adminLink.target = "_blank";
-        adminLink.rel = "noopener noreferrer";
-        adminLink.textContent = "CONTACT ADMIN ON TELEGRAM";
-        box.appendChild(adminLink);
+        button.textContent = "✓ COPIED";
 
-      } else if (result.payment_status === "Rejected") {
-        const rejectedMessage = document.createElement("p");
-        rejectedMessage.className = "message error";
-        rejectedMessage.textContent =
-          "Your payment was not approved. Please contact the administrator for clarification.";
-        box.appendChild(rejectedMessage);
-
-        const adminLink = document.createElement("a");
-        adminLink.className = "link-button telegram-btn";
-        adminLink.href = "https://t.me/Keyr025";
-        adminLink.target = "_blank";
-        adminLink.rel = "noopener noreferrer";
-        adminLink.textContent = "CONTACT ADMIN ON TELEGRAM";
-        box.appendChild(adminLink);
-      }
-
-
-      statusResult.appendChild(box);
-      statusResult.classList.remove("hidden");
+        setTimeout(function() {
+            button.textContent = originalText;
+        }, 1600);
 
     } catch (error) {
-      showMessage(
-        statusMessage,
-        error.message || "An unexpected error occurred.",
-        "error"
-      );
-
-    } finally {
-      setBusy(
-        checkButton,
-        false,
-        "Checking...",
-        "CHECK STATUS"
-      );
+        window.prompt("Copy this text:", text);
     }
-  });
+}
+
+/* COPY REFERENCE CODE */
+
+document.getElementById("copyReference").addEventListener("click", function() {
+    if (!currentRegistration) return;
+
+    copyText(
+        currentRegistration.reference,
+        this,
+        "COPY CODE"
+    );
+});
+
+/* COPY PAYMENT NUMBERS */
+
+document.querySelectorAll(".copy-account").forEach(function(button) {
+    button.addEventListener("click", function() {
+        copyText(
+            this.dataset.copy,
+            this,
+            "📋 Copy " + (
+                this.dataset.copy === "0995555866"
+                    ? "E-Birr Number"
+                    : "M-Pesa Number"
+            )
+        );
+    });
+});
+
+/* BACK BUTTON */
+
+document.getElementById("backButton").addEventListener("click", function() {
+    hideNotice(paymentError);
+    showRegistrationPage();
+});
+
+/* STEP 2: OPEN TELEGRAM */
+
+document.getElementById("telegramButton").addEventListener("click", function() {
+    hideNotice(paymentError);
+
+    if (!currentRegistration) {
+        showNotice(
+            paymentError,
+            "Registration details are missing. Please complete registration again."
+        );
+        return;
+    }
+
+    const paymentElement = document.querySelector(
+        'input[name="paymentMethod"]:checked'
+    );
+
+    if (!paymentElement) {
+        showNotice(
+            paymentError,
+            "Please select E-Birr or M-Pesa as your payment method."
+        );
+        return;
+    }
+
+    if (!document.getElementById("paymentConfirmed").checked) {
+        showNotice(
+            paymentError,
+            "Please confirm that you have made the payment before continuing."
+        );
+        return;
+    }
+
+    const paymentMethod = paymentElement.value;
+
+    const message = [
+        "🎓 KEYRADDIIN PREMIUM REGISTRATION",
+        "",
+        "📝 STUDENT INFORMATION",
+        "Full Name: " + currentRegistration.fullName,
+        "Phone: " + currentRegistration.phone,
+        "School: " + currentRegistration.school,
+        "Grade: " + currentRegistration.grade,
+        "",
+        "💳 PAYMENT INFORMATION",
+        "Fee: " + REGISTRATION_FEE + " ETB",
+        "Payment Method: " + paymentMethod,
+        "Reference Code: " + currentRegistration.reference,
+        "",
+        "📎 I will attach my payment receipt screenshot to this Telegram message.",
+        "",
+        "Please review my registration and payment proof.",
+        "Thank you."
+    ].join("\n");
+
+    const telegramURL =
+        "https://t.me/" +
+        TELEGRAM_USERNAME +
+        "?text=" +
+        encodeURIComponent(message);
+
+    /*
+      This opens Telegram with a prepared message.
+      The student must manually attach the payment screenshot
+      and press Send.
+    */
+
+    window.open(telegramURL, "_blank", "noopener,noreferrer");
+
+    document.getElementById("step3").classList.add("active");
+
+    showNotice(
+        paymentError,
+        "Telegram opened. Attach your payment screenshot, check the message, and press Send. Your registration is not submitted until you send it.",
+        "success"
+    );
+});
+
+/* FOOTER YEAR */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 </script>
 
