@@ -1,1428 +1,2708 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KEYRADDIIN PREMIUM REGISTRATION</title>
+  <title>KEYRADDIIN PREMIUM REGISTRATION</title>
 
-<meta name="theme-color" content="#10102b">
-<meta name="description" content="KEYRADDIIN PREMIUM Registration Portal for Grade 9 and Grade 10 students.">
+  <meta
+    name="description"
+    content="Register for KEYRADDIIN PREMIUM educational services. Grade 9 and Grade 10 students are welcome."
+  >
 
-<style>
-:root {
-    --navy: #10102b;
-    --navy2: #171738;
-    --purple: #772ce8;
-    --purple-light: #9b5cff;
-    --turquoise: #16d6c5;
-    --gold: #ffc857;
-    --card: #1b1b3b;
-    --card2: #24244b;
-    --text: #f2efff;
-    --muted: #b8b5d5;
-    --border: rgba(255,255,255,.12);
-    --danger: #ff5e78;
-    --success: #28d7a0;
-}
+  <meta name="theme-color" content="#0d9488">
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  <style>
+    /* =====================================================
+       KEYRADDIIN PREMIUM REGISTRATION
+       Clean White + Turquoise + Green Design
+       ===================================================== */
 
-html {
-    scroll-behavior: smooth;
-}
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --primary-light: #ccfbf1;
+      --green: #16a34a;
+      --green-light: #dcfce7;
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at 10% 10%, rgba(119,44,232,.18), transparent 30%),
-        radial-gradient(circle at 90% 35%, rgba(22,214,197,.09), transparent 28%),
-        var(--navy);
-    color: var(--text);
-    line-height: 1.6;
-    min-height: 100vh;
-}
+      --background: #f8fcfb;
+      --surface: #ffffff;
+      --surface-soft: #f0fdfa;
 
-button, input, select {
-    font: inherit;
-}
+      --text: #183b3a;
+      --text-soft: #526b69;
+      --border: #d9e9e6;
 
-button {
-    cursor: pointer;
-}
+      --danger: #dc2626;
+      --warning: #a16207;
 
-.container {
-    width: min(1120px, 92%);
-    margin: auto;
-}
+      --shadow:
+        0 8px 30px rgba(15, 118, 110, 0.07);
 
-/* HEADER */
-
-header {
-    background: rgba(8,8,27,.96);
-    border-bottom: 1px solid var(--border);
-    padding: 15px 0;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-}
-
-.logo {
-    width: 47px;
-    height: 47px;
-    display: grid;
-    place-items: center;
-    border-radius: 14px;
-    color: var(--navy);
-    font-size: 23px;
-    font-weight: 900;
-    background: linear-gradient(135deg, var(--turquoise), var(--gold));
-}
-
-.brand h1 {
-    font-size: 16px;
-    line-height: 1.3;
-}
-
-.brand p {
-    color: var(--turquoise);
-    font-size: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.header-badge {
-    color: var(--gold);
-    border: 1px solid rgba(255,200,87,.35);
-    background: rgba(255,200,87,.08);
-    border-radius: 25px;
-    padding: 7px 11px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-/* COUNTDOWN */
-
-.countdown-section {
-    padding: 22px 0 10px;
-}
-
-.countdown-panel {
-    background: linear-gradient(120deg, #25144e, #17183c 55%, #123c47);
-    border: 1px solid rgba(155,92,255,.5);
-    border-radius: 19px;
-    padding: 21px;
-    box-shadow: 0 12px 32px rgba(0,0,0,.2);
-}
-
-.countdown-title {
-    text-align: center;
-    color: var(--turquoise);
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-}
-
-.deadline-text {
-    text-align: center;
-    color: var(--muted);
-    font-size: 12px;
-    margin: 6px 0 17px;
-}
-
-.deadline-text strong {
-    color: var(--gold);
-}
-
-.countdown-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0,1fr));
-    gap: 9px;
-}
-
-.time-box {
-    text-align: center;
-    background: rgba(7,7,28,.7);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 13px 4px;
-}
-
-.time-number {
-    color: var(--gold);
-    font-size: clamp(20px,4vw,33px);
-    font-weight: 900;
-    font-variant-numeric: tabular-nums;
-    line-height: 1.3;
-}
-
-.time-label {
-    color: #c5c0e8;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: .6px;
-    text-transform: uppercase;
-}
-
-.countdown-status {
-    text-align: center;
-    color: var(--turquoise);
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 14px;
-}
-
-.countdown-status.closed {
-    color: var(--danger);
-}
-
-/* HERO */
-
-.hero {
-    text-align: center;
-    padding: 49px 0 35px;
-}
-
-.hero-tag {
-    display: inline-block;
-    padding: 7px 13px;
-    border-radius: 25px;
-    background: rgba(22,214,197,.07);
-    border: 1px solid rgba(22,214,197,.3);
-    color: var(--turquoise);
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
-}
-
-.hero h2 {
-    font-size: clamp(30px,5vw,51px);
-    line-height: 1.2;
-    margin-bottom: 17px;
-}
-
-.hero h2 span {
-    background: linear-gradient(90deg,var(--turquoise),var(--purple-light),var(--gold));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.hero-description {
-    max-width: 660px;
-    margin: auto;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 25px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    padding: 13px 20px;
-    border: none;
-    border-radius: 11px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 800;
-    transition: .2s;
-}
-
-.btn:hover:not(:disabled) {
-    transform: translateY(-2px);
-    filter: brightness(1.08);
-}
-
-.btn-primary {
-    color: white;
-    background: linear-gradient(120deg,var(--purple),#5820c1);
-}
-
-.btn-secondary {
-    color: var(--turquoise);
-    background: rgba(22,214,197,.07);
-    border: 1px solid rgba(22,214,197,.4);
-}
-
-.btn-gold {
-    color: #17132c;
-    background: linear-gradient(120deg,var(--gold),#f0a72c);
-}
-
-button:disabled {
-    opacity: .45;
-    cursor: not-allowed;
-    transform: none;
-}
-
-/* FEATURES */
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px;
-    padding: 10px 0 45px;
-}
-
-.feature-card {
-    padding: 21px;
-    border-radius: 15px;
-    border: 1px solid var(--border);
-    background: linear-gradient(145deg,var(--card2),var(--card));
-}
-
-.feature-icon {
-    display: grid;
-    place-items: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    background: rgba(119,44,232,.17);
-    font-size: 21px;
-    margin-bottom: 12px;
-}
-
-.feature-card:nth-child(2) .feature-icon {
-    background: rgba(22,214,197,.12);
-}
-
-.feature-card:nth-child(3) .feature-icon {
-    background: rgba(255,200,87,.12);
-}
-
-.feature-card h3 {
-    font-size: 15px;
-    margin-bottom: 6px;
-}
-
-.feature-card p {
-    color: var(--muted);
-    font-size: 12px;
-}
-
-/* REGISTRATION */
-
-.registration-section {
-    display: none;
-    padding: 15px 0 55px;
-}
-
-.registration-section.show {
-    display: block;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 24px;
-}
-
-.section-heading h2 {
-    font-size: clamp(25px,4vw,34px);
-    margin-bottom: 6px;
-}
-
-.section-heading p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.registration-layout {
-    display: grid;
-    grid-template-columns: minmax(0,1.4fr) minmax(260px,.8fr);
-    gap: 20px;
-    align-items: start;
-}
-
-.panel {
-    background: linear-gradient(145deg,#202044,#171730);
-    border: 1px solid var(--border);
-    border-radius: 17px;
-    padding: 23px;
-}
-
-.panel h3 {
-    font-size: 17px;
-    margin-bottom: 17px;
-}
-
-.form-group {
-    margin-bottom: 16px;
-}
-
-.form-group label {
-    display: block;
-    color: #ddd8ff;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 7px;
-}
-
-.required {
-    color: var(--gold);
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    background: #10102a;
-    border: 1px solid rgba(255,255,255,.15);
-    border-radius: 10px;
-    padding: 12px;
-    color: var(--text);
-    font-size: 13px;
-    outline: none;
-}
-
-.form-control:focus {
-    border-color: var(--turquoise);
-    box-shadow: 0 0 0 3px rgba(22,214,197,.08);
-}
-
-.form-control::placeholder {
-    color: #8581a9;
-}
-
-select.form-control option {
-    background: #171730;
-}
-
-.help-text {
-    display: block;
-    color: var(--muted);
-    font-size: 11px;
-    margin-top: 6px;
-}
-
-.fee-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 15px;
-    border-radius: 12px;
-    background: linear-gradient(110deg,rgba(119,44,232,.18),rgba(22,214,197,.07));
-    border: 1px solid rgba(155,92,255,.35);
-    margin-bottom: 19px;
-}
-
-.fee-box span {
-    color: var(--muted);
-    font-size: 12px;
-}
-
-.fee-box strong {
-    color: var(--gold);
-    font-size: 24px;
-}
-
-.payment-option {
-    padding: 14px;
-    margin-bottom: 12px;
-    border-radius: 12px;
-    background: rgba(255,200,87,.05);
-    border: 1px solid rgba(255,200,87,.2);
-}
-
-.payment-option h4 {
-    color: var(--gold);
-    font-size: 13px;
-    margin-bottom: 5px;
-}
-
-.payment-option p {
-    color: var(--text);
-    font-size: 12px;
-    overflow-wrap: anywhere;
-}
-
-.payment-option strong {
-    color: var(--turquoise);
-}
-
-.notice {
-    padding: 12px;
-    margin-bottom: 17px;
-    border-left: 3px solid var(--gold);
-    background: rgba(255,200,87,.06);
-    border-radius: 0 8px 8px 0;
-    color: #ded9f4;
-    font-size: 11px;
-}
-
-.status-message {
-    display: none;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 12px;
-    margin-bottom: 15px;
-    overflow-wrap: anywhere;
-}
-
-.status-message.error {
-    display: block;
-    color: #ffdbe1;
-    background: rgba(255,94,120,.12);
-    border: 1px solid rgba(255,94,120,.3);
-}
-
-.status-message.success {
-    display: block;
-    color: #b9ffe8;
-    background: rgba(40,215,160,.1);
-    border: 1px solid rgba(40,215,160,.3);
-}
-
-.closed-panel {
-    display: none;
-    margin: 20px auto 40px;
-    max-width: 700px;
-    padding: 30px 20px;
-    text-align: center;
-    background: rgba(255,94,120,.08);
-    border: 1px solid rgba(255,94,120,.35);
-    border-radius: 18px;
-}
-
-.closed-panel h2 {
-    color: var(--danger);
-    margin-bottom: 9px;
-}
-
-.closed-panel p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-/* FOOTER */
-
-footer {
-    background: rgba(7,7,24,.7);
-    border-top: 1px solid var(--border);
-    text-align: center;
-    padding: 25px 0;
-}
-
-footer h3 {
-    color: var(--turquoise);
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-footer p {
-    color: var(--muted);
-    font-size: 11px;
-}
-
-.footer-gold {
-    color: var(--gold);
-}
-
-@media(max-width:760px) {
-    .features {
-        grid-template-columns: 1fr;
+      --radius: 18px;
     }
 
-    .registration-layout {
-        grid-template-columns: 1fr;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      background: var(--background);
+      color: var(--text);
+
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #5eead4;
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* ================= NAVIGATION ================= */
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      color: var(--text);
+      font-weight: 800;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 14px;
+
+      color: white;
+      font-size: 21px;
+      font-weight: 900;
+
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--green)
+      );
+
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      line-height: 1.3;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 15px;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-text span {
+      color: var(--text-soft);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    .nav-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 10px 17px;
+
+      border-radius: 12px;
+      background: var(--primary);
+      color: white !important;
+    }
+
+    .nav-button:hover {
+      background: var(--primary-dark);
+    }
+
+    /* ================= HERO ================= */
 
     .hero {
-        padding-top: 37px;
+      padding: 78px 0 65px;
+
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(153, 246, 228, 0.30),
+          transparent 32%
+        ),
+        linear-gradient(
+          180deg,
+          #ffffff,
+          #f4fcf9
+        );
+
+      border-bottom: 1px solid var(--border);
     }
 
-    .panel {
-        padding: 18px;
-    }
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
 
-@media(max-width:440px) {
-    .brand h1 {
-        font-size: 12px;
+      gap: 45px;
+      align-items: center;
     }
 
-    .brand p {
-        font-size: 8px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 7px 13px;
+
+      background: var(--primary-light);
+      color: var(--primary-dark);
+
+      border-radius: 999px;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      margin-bottom: 20px;
     }
 
-    .logo {
-        width: 39px;
-        height: 39px;
-        font-size: 19px;
+    .status-dot {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+      background: var(--green);
     }
 
-    .header-badge {
-        font-size: 9px;
-        padding: 6px 8px;
+    h1 {
+      font-size: clamp(34px, 5vw, 57px);
+      line-height: 1.14;
+      letter-spacing: -1.5px;
+
+      margin-bottom: 22px;
     }
 
-    .countdown-panel {
-        padding: 14px 9px;
+    .highlight {
+      color: var(--primary);
     }
 
-    .countdown-grid {
-        gap: 5px;
+    .hero-description {
+      max-width: 610px;
+
+      color: var(--text-soft);
+      font-size: 16px;
+
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      border: 1px solid transparent;
+      border-radius: 12px;
+
+      padding: 13px 20px;
+
+      font-size: 14px;
+      font-weight: 750;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .button-secondary {
+      background: white;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .button-secondary:hover {
+      background: var(--surface-soft);
+      border-color: var(--primary);
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .hero-note span {
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    /* ================= HERO CARD ================= */
+
+    .hero-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+
+      padding: 28px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .hero-card-header h2 {
+      font-size: 18px;
+    }
+
+    .open-badge {
+      padding: 5px 10px;
+
+      border-radius: 999px;
+
+      background: var(--green-light);
+      color: #166534;
+
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .price-box {
+      padding: 23px;
+
+      background: var(--surface-soft);
+      border: 1px solid #c9f0e8;
+
+      border-radius: 17px;
+
+      margin-bottom: 22px;
+    }
+
+    .price-label {
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .price {
+      color: var(--primary-dark);
+
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -1px;
+
+      line-height: 1.4;
+    }
+
+    .price-description {
+      color: var(--text-soft);
+      font-size: 12px;
+    }
+
+    .hero-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .check-icon {
+      display: grid;
+      place-items: center;
+
+      width: 23px;
+      height: 23px;
+
+      border-radius: 8px;
+
+      background: var(--green-light);
+      color: #166534;
+
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      text-align: center;
+
+      margin: 0 auto 40px;
+    }
+
+    .section-tag {
+      display: inline-block;
+
+      color: var(--primary-dark);
+      background: var(--primary-light);
+
+      padding: 6px 12px;
+      border-radius: 999px;
+
+      font-size: 11px;
+      font-weight: 850;
+
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 4vw, 36px);
+      line-height: 1.3;
+
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    /* ================= FEATURES ================= */
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .feature-card {
+      padding: 27px;
+
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      box-shadow: 0 4px 18px rgba(15, 118, 110, 0.035);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--surface-soft);
+      border: 1px solid #c9f0e8;
+
+      border-radius: 15px;
+
+      font-size: 23px;
+
+      margin-bottom: 18px;
+    }
+
+    .feature-card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    /* ================= DEADLINE ================= */
+
+    .deadline-section {
+      padding-top: 10px;
+    }
+
+    .deadline-card {
+      padding: 34px;
+
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+
+      box-shadow: var(--shadow);
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 30px;
+      align-items: center;
+    }
+
+    .deadline-card h2 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .deadline-card p {
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .deadline-date {
+      color: var(--primary-dark);
+      font-weight: 800;
+
+      margin-top: 10px;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
     }
 
     .time-box {
-        padding: 11px 2px;
-        border-radius: 8px;
+      text-align: center;
+
+      background: var(--surface-soft);
+      border: 1px solid #c9f0e8;
+      border-radius: 13px;
+
+      padding: 16px 5px;
     }
 
-    .time-number {
-        font-size: 19px;
+    .time-box strong {
+      display: block;
+
+      font-size: 26px;
+      line-height: 1.3;
+
+      color: var(--primary-dark);
     }
 
-    .time-label {
-        font-size: 8px;
-        letter-spacing: 0;
+    .time-box span {
+      display: block;
+
+      font-size: 10px;
+      font-weight: 700;
+
+      color: var(--text-soft);
+      margin-top: 5px;
     }
-}
-</style>
+
+    .deadline-status {
+      margin-top: 14px;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .deadline-status.open {
+      color: var(--green);
+    }
+
+    .deadline-status.closed {
+      color: var(--danger);
+    }
+
+    /* ================= REGISTRATION ================= */
+
+    .registration-section {
+      background: #f1faf7;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .registration-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+
+      gap: 28px;
+      align-items: start;
+    }
+
+    .registration-info {
+      padding: 27px;
+
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .registration-info h3 {
+      font-size: 21px;
+      margin-bottom: 13px;
+    }
+
+    .registration-info > p {
+      color: var(--text-soft);
+      font-size: 13px;
+
+      margin-bottom: 22px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+
+      padding: 15px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .info-item .icon {
+      font-size: 20px;
+    }
+
+    .info-item strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .info-item span {
+      display: block;
+
+      color: var(--text-soft);
+      font-size: 12px;
+    }
+
+    .form-card {
+      padding: 30px;
+
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow);
+    }
+
+    .form-title {
+      font-size: 23px;
+      margin-bottom: 6px;
+    }
+
+    .form-subtitle {
+      color: var(--text-soft);
+      font-size: 13px;
+
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+      min-width: 0;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+
+      font-size: 13px;
+      font-weight: 750;
+
+      margin-bottom: 7px;
+    }
+
+    .required {
+      color: var(--danger);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-width: 0;
+
+      border: 1px solid #cddedb;
+      border-radius: 11px;
+
+      background: #ffffff;
+      color: var(--text);
+
+      padding: 12px 13px;
+
+      font-size: 14px;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #829794;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+
+      box-shadow:
+        0 0 0 3px rgba(13, 148, 136, 0.10);
+
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 95px;
+    }
+
+    .field-help {
+      display: block;
+
+      color: var(--text-soft);
+      font-size: 11px;
+
+      margin-top: 6px;
+    }
+
+    /* ================= PAYMENT ================= */
+
+    .payment-panel {
+      padding: 20px;
+
+      background: var(--surface-soft);
+      border: 1px solid #c9f0e8;
+      border-radius: 15px;
+
+      margin-bottom: 20px;
+    }
+
+    .payment-panel h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .payment-panel > p {
+      color: var(--text-soft);
+      font-size: 12px;
+
+      margin-bottom: 15px;
+    }
+
+    .payment-method {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+
+      padding: 14px;
+      margin-bottom: 11px;
+    }
+
+    .payment-method:last-child {
+      margin-bottom: 0;
+    }
+
+    .payment-icon {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--green-light);
+      border-radius: 12px;
+
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .payment-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .payment-details strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .account-number {
+      font-size: 14px;
+      font-weight: 850;
+      color: var(--primary-dark);
+
+      overflow-wrap: anywhere;
+    }
+
+    .account-name {
+      display: block;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .copy-button {
+      padding: 8px 10px;
+
+      border: 1px solid var(--border);
+      border-radius: 9px;
+
+      background: white;
+      color: var(--primary-dark);
+
+      font-size: 11px;
+      font-weight: 800;
+
+      flex-shrink: 0;
+    }
+
+    .copy-button:hover {
+      background: var(--primary-light);
+    }
+
+    .payment-warning {
+      padding: 12px 14px;
+
+      background: #fffbeb;
+      border: 1px solid #f5e3a6;
+      border-radius: 11px;
+
+      color: #854d0e;
+      font-size: 12px;
+
+      margin-top: 15px;
+    }
+
+    .payment-note {
+      padding: 13px 15px;
+
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+
+      color: var(--text-soft);
+      font-size: 12px;
+
+      margin-top: 12px;
+    }
+
+    /* ================= CONSENT ================= */
+
+    .consent-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+
+      padding: 14px;
+
+      background: #f8fcfb;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+
+      margin-bottom: 18px;
+    }
+
+    .consent-box input {
+      width: 17px;
+      height: 17px;
+
+      margin-top: 4px;
+      flex-shrink: 0;
+
+      accent-color: var(--primary);
+    }
+
+    .consent-box label {
+      font-size: 12px;
+      font-weight: 500;
+
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .submit-button {
+      width: 100%;
+
+      border: 0;
+      border-radius: 12px;
+
+      background: var(--primary);
+      color: white;
+
+      padding: 15px 18px;
+
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    .submit-button:hover:not(:disabled) {
+      background: var(--primary-dark);
+    }
+
+    .submit-button:disabled {
+      background: #9caeaa;
+      cursor: not-allowed;
+    }
+
+    .form-message {
+      display: none;
+
+      padding: 14px;
+      border-radius: 11px;
+
+      margin-top: 18px;
+
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .form-message.error {
+      display: block;
+
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #991b1b;
+    }
+
+    .form-message.success {
+      display: block;
+
+      background: var(--green-light);
+      border: 1px solid #bbf7d0;
+      color: #166534;
+    }
+
+    .message-preview {
+      width: 100%;
+      min-height: 190px;
+
+      margin-top: 12px;
+      padding: 12px;
+
+      background: white;
+      border: 1px solid #b8e4d9;
+      border-radius: 10px;
+
+      font-size: 12px;
+      line-height: 1.6;
+
+      color: var(--text);
+    }
+
+    .message-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-top: 12px;
+    }
+
+    .small-button {
+      flex: 1;
+
+      min-width: 140px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px;
+
+      border-radius: 10px;
+      border: 1px solid var(--border);
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .small-button.primary {
+      color: white;
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .small-button.secondary {
+      color: var(--primary-dark);
+      background: white;
+    }
+
+    .small-button:hover {
+      filter: brightness(0.97);
+    }
+
+    .privacy-note {
+      color: var(--text-soft);
+      font-size: 11px;
+
+      margin-top: 15px;
+    }
+
+    /* ================= FAQ ================= */
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+
+      display: grid;
+      gap: 13px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+
+      padding: 19px 21px;
+    }
+
+    .faq-item h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #f0faf7;
+      border-top: 1px solid var(--border);
+
+      padding: 35px 0 22px;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 25px;
+      flex-wrap: wrap;
+
+      margin-bottom: 25px;
+    }
+
+    .footer-brand {
+      max-width: 420px;
+    }
+
+    .footer-brand strong {
+      font-size: 16px;
+    }
+
+    .footer-brand p {
+      color: var(--text-soft);
+      font-size: 12px;
+
+      margin-top: 9px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .footer-bottom {
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      color: var(--text-soft);
+      font-size: 11px;
+    }
+
+    /* ================= TOAST ================= */
+
+    .toast {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      max-width: 90%;
+      width: max-content;
+
+      padding: 12px 18px;
+
+      background: #164e48;
+      color: white;
+
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+
+      font-size: 13px;
+      font-weight: 650;
+
+      z-index: 1000;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .hero-card {
+        max-width: 600px;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .registration-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .deadline-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 91%;
+      }
+
+      .nav-inner {
+        min-height: 68px;
+      }
+
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+
+      .brand-text strong {
+        font-size: 12px;
+      }
+
+      .brand-text span {
+        font-size: 10px;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .nav-button {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 46px 0;
+      }
+
+      h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      section {
+        padding: 52px 0;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-card {
+        padding: 22px;
+      }
+
+      .deadline-card {
+        padding: 22px;
+      }
+
+      .countdown {
+        gap: 6px;
+      }
+
+      .time-box {
+        padding: 12px 3px;
+      }
+
+      .time-box strong {
+        font-size: 21px;
+      }
+
+      .time-box span {
+        font-size: 9px;
+      }
+
+      .form-card {
+        padding: 20px 16px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .form-group.full-width {
+        grid-column: auto;
+      }
+
+      .registration-info {
+        padding: 22px;
+      }
+
+      .payment-method {
+        padding: 11px;
+        gap: 9px;
+      }
+
+      .payment-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+      }
+
+      .copy-button {
+        padding: 8px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container header-content">
+  <!-- ================= NAVIGATION ================= -->
 
-        <div class="brand">
-            <div class="logo">K</div>
+  <header class="navbar">
+    <div class="container nav-inner">
 
-            <div>
-                <h1>KEYRADDIIN PREMIUM</h1>
-                <p>REGISTRATION PORTAL</p>
-            </div>
+      <a class="brand" href="#home" aria-label="KEYRADDIIN home">
+        <div class="brand-logo">K</div>
+
+        <div class="brand-text">
+          <strong>KEYRADDIIN PREMIUM</strong>
+          <span>Education • Excellence • Success</span>
         </div>
+      </a>
 
-        <div class="header-badge">GRADE 9 &amp; 10</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#features">Benefits</a>
+        <a href="#deadline">Deadline</a>
+        <a href="#faq">FAQ</a>
+
+        <a class="nav-button" href="#register">
+          Register Now
+        </a>
+      </nav>
 
     </div>
-</header>
+  </header>
 
 
-<!-- COUNTDOWN AT THE TOP -->
+  <main>
 
-<section class="countdown-section">
-    <div class="container">
+    <!-- ================= HERO ================= -->
 
-        <div class="countdown-panel">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
 
-            <div class="countdown-title">
-                ⏳ REGISTRATION CLOSING COUNTDOWN
-            </div>
+        <div>
 
-            <p class="deadline-text">
-                Deadline:
-                <strong>October 30, 2027 — 12:30 PM</strong>
-                <br>
-                Ethiopia Time (UTC+3)
-            </p>
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            Grade 9 & Grade 10 Registration
+          </div>
 
-            <div class="countdown-grid">
+          <h1>
+            Learn Better.<br>
+            Achieve More with
+            <span class="highlight">KEYRADDIIN.</span>
+          </h1>
 
-                <div class="time-box">
-                    <div class="time-number" id="years">00</div>
-                    <div class="time-label">Years</div>
-                </div>
+          <p class="hero-description">
+            Welcome to KEYRADDIIN PREMIUM, an educational service
+            designed to support Grade 9 and Grade 10 students with
+            their learning and exam preparation.
+          </p>
 
-                <div class="time-box">
-                    <div class="time-number" id="days">000</div>
-                    <div class="time-label">Days</div>
-                </div>
-
-                <div class="time-box">
-                    <div class="time-number" id="hours">00</div>
-                    <div class="time-label">Hours</div>
-                </div>
-
-                <div class="time-box">
-                    <div class="time-number" id="minutes">00</div>
-                    <div class="time-label">Minutes</div>
-                </div>
-
-                <div class="time-box">
-                    <div class="time-number" id="seconds">00</div>
-                    <div class="time-label">Seconds</div>
-                </div>
-
-            </div>
-
-            <div class="countdown-status" id="countdownStatus">
-                REGISTRATION IS OPEN
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<main>
-
-<!-- HOMEPAGE -->
-
-<section class="hero" id="home">
-    <div class="container">
-
-        <div class="hero-tag">
-            ✦ YOUR EDUCATION, YOUR FUTURE ✦
-        </div>
-
-        <h2>
-            Welcome to <br>
-            <span>KEYRADDIIN PREMIUM</span>
-        </h2>
-
-        <p class="hero-description">
-            Join our educational community and register for Grade 9
-            or Grade 10. Complete your registration, make your payment,
-            then send your registration details and payment screenshot
-            to your selected Telegram administrator.
-        </p>
-
-        <div class="hero-actions">
-
-            <button
-                type="button"
-                class="btn btn-primary"
-                id="registerButton"
-                onclick="showRegistration()"
-            >
-                REGISTER NOW →
-            </button>
-
-            <a href="#information" class="btn btn-secondary">
-                LEARN MORE
+          <div class="hero-actions">
+            <a href="#register" class="button button-primary">
+              Start Registration →
             </a>
 
+            <a href="#features" class="button button-secondary">
+              Explore Benefits
+            </a>
+          </div>
+
+          <p class="hero-note">
+            <span>✓</span>
+            Simple registration with E-Birr or M-Pesa payment.
+          </p>
+
         </div>
 
-    </div>
-</section>
+
+        <aside class="hero-card">
+
+          <div class="hero-card-header">
+            <h2>Registration Details</h2>
+
+            <span class="open-badge" id="heroStatus">
+              CHECKING...
+            </span>
+          </div>
+
+          <div class="price-box">
+            <p class="price-label">Registration fee</p>
+
+            <div class="price">50 ETB</div>
+
+            <p class="price-description">
+              One-time registration fee.
+            </p>
+          </div>
+
+          <ul class="hero-list">
+
+            <li>
+              <span class="check-icon">✓</span>
+              <span>Grade 9 and Grade 10 students can register.</span>
+            </li>
+
+            <li>
+              <span class="check-icon">✓</span>
+              <span>Choose E-Birr or M-Pesa as your payment method.</span>
+            </li>
+
+            <li>
+              <span class="check-icon">✓</span>
+              <span>Contact a Telegram admin after preparing your details.</span>
+            </li>
+
+            <li>
+              <span class="check-icon">✓</span>
+              <span>Keep your payment confirmation for verification.</span>
+            </li>
+
+          </ul>
+
+        </aside>
+
+      </div>
+    </section>
 
 
-<!-- FEATURES -->
+    <!-- ================= FEATURES ================= -->
 
-<section class="container features" id="information">
-
-    <div class="feature-card">
-        <div class="feature-icon">🎓</div>
-        <h3>Grade 9 &amp; Grade 10</h3>
-        <p>
-            Select your grade and provide correct student information.
-        </p>
-    </div>
-
-    <div class="feature-card">
-        <div class="feature-icon">💳</div>
-        <h3>Registration Fee</h3>
-        <p>
-            The registration fee is 50 ETB. Use the payment
-            instructions displayed on this website.
-        </p>
-    </div>
-
-    <div class="feature-card">
-        <div class="feature-icon">📲</div>
-        <h3>Telegram Confirmation</h3>
-        <p>
-            Select your Telegram admin, open the chat, attach your
-            payment screenshot and send your registration.
-        </p>
-    </div>
-
-</section>
-
-
-<!-- REGISTRATION CLOSED -->
-
-<section class="container">
-    <div class="closed-panel" id="closedPanel">
-
-        <h2>🔒 REGISTRATION CLOSED</h2>
-
-        <p>
-            The registration deadline has passed.
-            New registrations are no longer accepted by this page.
-        </p>
-
-    </div>
-</section>
-
-
-<!-- REGISTRATION FORM -->
-
-<section class="registration-section" id="registration">
-
-    <div class="container">
+    <section id="features">
+      <div class="container">
 
         <div class="section-heading">
-            <h2>Student Registration</h2>
-            <p>Complete all required fields carefully.</p>
+
+          <span class="section-tag">WHY KEYRADDIIN?</span>
+
+          <h2>Supporting Your Educational Journey</h2>
+
+          <p>
+            A simple registration process to help students connect
+            with KEYRADDIIN PREMIUM educational services.
+          </p>
+
         </div>
+
+
+        <div class="features-grid">
+
+          <article class="feature-card">
+            <div class="feature-icon">📚</div>
+
+            <h3>Educational Support</h3>
+
+            <p>
+              Access educational materials and learning support
+              made available through KEYRADDIIN services.
+            </p>
+          </article>
+
+
+          <article class="feature-card">
+            <div class="feature-icon">📝</div>
+
+            <h3>Exam Preparation</h3>
+
+            <p>
+              Strengthen your preparation through practice
+              questions and available study resources.
+            </p>
+          </article>
+
+
+          <article class="feature-card">
+            <div class="feature-icon">📱</div>
+
+            <h3>Easy Registration</h3>
+
+            <p>
+              Complete the form on your phone or computer
+              and prepare your registration message.
+            </p>
+          </article>
+
+
+          <article class="feature-card">
+            <div class="feature-icon">💳</div>
+
+            <h3>Payment Options</h3>
+
+            <p>
+              Use the listed E-Birr or M-Pesa account.
+              Check the account name and number carefully.
+            </p>
+          </article>
+
+
+          <article class="feature-card">
+            <div class="feature-icon">🤝</div>
+
+            <h3>Admin Assistance</h3>
+
+            <p>
+              Select a Telegram admin and send your
+              registration details for assistance.
+            </p>
+          </article>
+
+
+          <article class="feature-card">
+            <div class="feature-icon">🎯</div>
+
+            <h3>Student Focused</h3>
+
+            <p>
+              The registration form is designed specifically
+              for eligible Grade 9 and Grade 10 students.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= DEADLINE ================= -->
+
+    <section class="deadline-section" id="deadline">
+      <div class="container">
+
+        <div class="deadline-card">
+
+          <div>
+            <span class="section-tag">IMPORTANT DATE</span>
+
+            <h2>Registration Deadline</h2>
+
+            <p>
+              Complete your registration before the deadline.
+              The countdown uses Ethiopia time (UTC+3).
+            </p>
+
+            <p class="deadline-date">
+              November 24, 2026 — 12:30 PM
+            </p>
+
+            <p>
+              Ethiopia local time: East Africa Time (EAT).
+            </p>
+
+            <div
+              id="deadlineStatus"
+              class="deadline-status"
+              aria-live="polite"
+            >
+              Checking registration status...
+            </div>
+          </div>
+
+
+          <div>
+
+            <div
+              class="countdown"
+              aria-label="Time remaining until registration deadline"
+            >
+
+              <div class="time-box">
+                <strong id="days">--</strong>
+                <span>Days</span>
+              </div>
+
+              <div class="time-box">
+                <strong id="hours">--</strong>
+                <span>Hours</span>
+              </div>
+
+              <div class="time-box">
+                <strong id="minutes">--</strong>
+                <span>Minutes</span>
+              </div>
+
+              <div class="time-box">
+                <strong id="seconds">--</strong>
+                <span>Seconds</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= REGISTRATION ================= -->
+
+    <section class="registration-section" id="register">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-tag">JOIN KEYRADDIIN</span>
+
+          <h2>Complete Your Registration</h2>
+
+          <p>
+            Enter accurate details, select a payment method,
+            and prepare your message for the Telegram admin.
+          </p>
+
+        </div>
+
 
         <div class="registration-layout">
 
-            <!-- STUDENT FORM -->
+          <!-- LEFT INFORMATION -->
 
-            <div class="panel">
+          <aside class="registration-info">
 
-                <h3>📝 Student Information</h3>
+            <h3>Before You Register</h3>
 
-                <div
-                    id="formMessage"
-                    class="status-message"
-                    role="status"
-                    aria-live="polite"
-                ></div>
-
-                <form id="registrationForm">
-
-                    <div class="form-group">
-                        <label for="fullName">
-                            Full Name <span class="required">*</span>
-                        </label>
-
-                        <input
-                            class="form-control"
-                            type="text"
-                            id="fullName"
-                            name="fullName"
-                            placeholder="Enter your full name"
-                            minlength="3"
-                            maxlength="100"
-                            autocomplete="name"
-                            required
-                        >
-                    </div>
+            <p>
+              Please read these instructions carefully
+              before submitting your details.
+            </p>
 
 
-                    <div class="form-group">
-                        <label for="grade">
-                            Select Grade <span class="required">*</span>
-                        </label>
+            <div class="info-item">
+              <span class="icon">🎓</span>
 
-                        <select
-                            class="form-control"
-                            id="grade"
-                            name="grade"
-                            required
-                        >
-                            <option value="">Choose your grade</option>
-                            <option value="Grade 9">Grade 9</option>
-                            <option value="Grade 10">Grade 10</option>
-                        </select>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="phone">
-                            Phone Number <span class="required">*</span>
-                        </label>
-
-                        <input
-                            class="form-control"
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="Enter your phone number"
-                            minlength="9"
-                            maxlength="20"
-                            autocomplete="tel"
-                            required
-                        >
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="school">
-                            School Name <span class="required">*</span>
-                        </label>
-
-                        <input
-                            class="form-control"
-                            type="text"
-                            id="school"
-                            name="school"
-                            placeholder="Enter your school name"
-                            maxlength="120"
-                            required
-                        >
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="paymentMethod">
-                            Payment Method <span class="required">*</span>
-                        </label>
-
-                        <select
-                            class="form-control"
-                            id="paymentMethod"
-                            name="paymentMethod"
-                            required
-                        >
-                            <option value="">Choose payment method</option>
-                            <option value="E-Birr">E-Birr</option>
-                            <option value="M-Pesa">M-Pesa</option>
-                        </select>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="paymentReference">
-                            Payment Transaction Reference
-                        </label>
-
-                        <input
-                            class="form-control"
-                            type="text"
-                            id="paymentReference"
-                            name="paymentReference"
-                            placeholder="Enter transaction ID if available"
-                            maxlength="100"
-                        >
-
-                        <small class="help-text">
-                            Enter the transaction reference if it is
-                            available on your payment receipt.
-                        </small>
-                    </div>
-
-
-                    <!-- TELEGRAM ADMIN SELECTION -->
-
-                    <div class="form-group">
-                        <label for="telegramAdmin">
-                            Choose Telegram Admin
-                            <span class="required">*</span>
-                        </label>
-
-                        <select
-                            class="form-control"
-                            id="telegramAdmin"
-                            name="telegramAdmin"
-                            required
-                        >
-                            <option value="">Select Telegram username</option>
-                            <option value="Keyr025">@Keyr025</option>
-                            <option value="keyraddiin">@keyraddiin</option>
-                            <option value="Key05r">@Key05r</option>
-                        </select>
-
-                        <small class="help-text">
-                            Select the Telegram account where you want
-                            to send your registration.
-                        </small>
-                    </div>
-
-
-                    <div class="notice">
-                        ⚠️ After Telegram opens, attach your payment
-                        screenshot directly in the Telegram chat.
-                        Then press Send. Your payment will be verified
-                        manually by the administrator.
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="btn btn-primary"
-                        id="submitButton"
-                        style="width:100%;"
-                    >
-                        SEND REGISTRATION TO TELEGRAM →
-                    </button>
-
-                </form>
-
+              <div>
+                <strong>Eligible Grades</strong>
+                <span>Grade 9 and Grade 10</span>
+              </div>
             </div>
 
 
-            <!-- PAYMENT INFORMATION -->
+            <div class="info-item">
+              <span class="icon">💰</span>
 
-            <aside class="panel">
+              <div>
+                <strong>Registration Fee</strong>
+                <span>50 Ethiopian Birr (ETB)</span>
+              </div>
+            </div>
 
-                <h3>💳 Payment Information</h3>
 
-                <div class="fee-box">
-                    <span>Registration Fee</span>
-                    <strong>50 ETB</strong>
+            <div class="info-item">
+              <span class="icon">📅</span>
+
+              <div>
+                <strong>Registration Deadline</strong>
+                <span>November 24, 2026 at 12:30 PM</span>
+              </div>
+            </div>
+
+
+            <div class="info-item">
+              <span class="icon">📲</span>
+
+              <div>
+                <strong>Contact Method</strong>
+                <span>Telegram admin</span>
+              </div>
+            </div>
+
+
+            <div class="payment-warning">
+              <strong>Important:</strong>
+              Verify the payment account details before sending
+              money. Keep your transaction confirmation.
+            </div>
+
+          </aside>
+
+
+          <!-- REGISTRATION FORM -->
+
+          <div class="form-card">
+
+            <h3 class="form-title">Student Registration Form</h3>
+
+            <p class="form-subtitle">
+              Fields marked with * are required.
+            </p>
+
+
+            <form id="registrationForm">
+
+              <div class="form-grid">
+
+                <!-- FULL NAME -->
+
+                <div class="form-group full-width">
+                  <label for="fullName">
+                    Full Name <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    minlength="3"
+                    maxlength="100"
+                    autocomplete="name"
+                    required
+                  >
                 </div>
 
 
-                <div class="payment-option">
-                    <h4>🟢 E-Birr</h4>
+                <!-- GRADE -->
 
-                    <p>
-                        Account Number:
-                        <strong>0995555866</strong>
-                    </p>
+                <div class="form-group">
+                  <label for="grade">
+                    Grade <span class="required">*</span>
+                  </label>
 
-                    <p>
-                        Account Name:
-                        Keyraddiin Abdella Jibraill
-                    </p>
+                  <select id="grade" name="grade" required>
+                    <option value="">Select grade</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                  </select>
                 </div>
 
 
-                <div class="payment-option">
-                    <h4>🔵 M-Pesa</h4>
+                <!-- PHONE -->
 
-                    <p>
-                        Account Number:
-                        <strong>0799574155</strong>
-                    </p>
+                <div class="form-group">
+                  <label for="phone">
+                    Phone Number <span class="required">*</span>
+                  </label>
 
-                    <p>
-                        Account Name:
-                        Abdella Jibraill Ahmed
-                    </p>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="09XXXXXXXX or +251..."
+                    autocomplete="tel"
+                    maxlength="20"
+                    required
+                  >
+
+                  <span class="field-help">
+                    Enter a phone number the admin can use to contact you.
+                  </span>
                 </div>
 
 
-                <div class="notice">
-                    <strong>Important:</strong>
-                    Check the account name and number before paying.
-                    Keep your payment receipt or screenshot.
+                <!-- SCHOOL -->
+
+                <div class="form-group full-width">
+                  <label for="school">
+                    School Name <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="school"
+                    name="school"
+                    placeholder="Enter your school name"
+                    minlength="2"
+                    maxlength="120"
+                    required
+                  >
                 </div>
 
 
-                <h3 style="margin-top:24px;">
-                    📩 Registration Steps
-                </h3>
+                <!-- PAYMENT METHOD -->
 
-                <p style="font-size:12px;color:var(--muted);">
-                    <strong>1.</strong> Complete the form.<br><br>
+                <div class="form-group full-width">
+                  <label for="paymentMethod">
+                    Payment Method <span class="required">*</span>
+                  </label>
 
-                    <strong>2.</strong> Pay 50 ETB.<br><br>
+                  <select
+                    id="paymentMethod"
+                    name="paymentMethod"
+                    required
+                  >
+                    <option value="">Select payment method</option>
+                    <option value="E-Birr">E-Birr</option>
+                    <option value="M-Pesa">M-Pesa</option>
+                  </select>
+                </div>
 
-                    <strong>3.</strong> Select your Telegram admin.<br><br>
 
-                    <strong>4.</strong> Continue to Telegram.<br><br>
+                <!-- TRANSACTION REFERENCE -->
 
-                    <strong>5.</strong> Attach your payment screenshot
-                    directly in Telegram.<br><br>
+                <div class="form-group full-width">
+                  <label for="transactionReference">
+                    Transaction Reference (Optional)
+                  </label>
 
-                    <strong>6.</strong> Press Send and wait for
-                    payment verification.
+                  <input
+                    type="text"
+                    id="transactionReference"
+                    name="transactionReference"
+                    placeholder="Enter transaction ID if available"
+                    maxlength="100"
+                  >
+
+                  <span class="field-help">
+                    Do not enter your payment PIN or password.
+                  </span>
+                </div>
+
+
+                <!-- TELEGRAM ADMIN -->
+
+                <div class="form-group full-width">
+                  <label for="telegramAdmin">
+                    Choose Telegram Admin
+                    <span class="required">*</span>
+                  </label>
+
+                  <select
+                    id="telegramAdmin"
+                    name="telegramAdmin"
+                    required
+                  >
+                    <option value="">Select an admin</option>
+                    <option value="Keyr025">@Keyr025</option>
+                    <option value="keyraddiin">@keyraddiin</option>
+                    <option value="Key05r">@Key05r</option>
+                  </select>
+
+                  <span class="field-help">
+                    Your prepared message will identify the selected admin.
+                    You will still need to open the admin's chat in Telegram.
+                  </span>
+                </div>
+
+              </div>
+
+
+              <!-- PAYMENT DETAILS -->
+
+              <div class="payment-panel">
+
+                <h3>Official Payment Accounts</h3>
+
+                <p>
+                  Registration fee: <strong>50 ETB</strong>.
+                  Select your payment method above.
                 </p>
 
-                <a
-                    href="https://t.me/Keyr025"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-secondary"
-                    style="width:100%;margin-top:18px;"
-                >
-                    CONTACT @Keyr025
-                </a>
 
-            </aside>
+                <!-- E-BIRR -->
+
+                <div class="payment-method">
+
+                  <div class="payment-icon">💳</div>
+
+                  <div class="payment-details">
+                    <strong>E-Birr</strong>
+
+                    <span class="account-number">
+                      0995555866
+                    </span>
+
+                    <span class="account-name">
+                      Account name: Keyraddiin Abdella Jibraill
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="copy-button"
+                    data-copy="0995555866"
+                  >
+                    Copy
+                  </button>
+
+                </div>
+
+
+                <!-- M-PESA -->
+
+                <div class="payment-method">
+
+                  <div class="payment-icon">📱</div>
+
+                  <div class="payment-details">
+                    <strong>M-Pesa</strong>
+
+                    <span class="account-number">
+                      0799574155
+                    </span>
+
+                    <span class="account-name">
+                      Account name: Abdella Jibraill Ahmed
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="copy-button"
+                    data-copy="0799574155"
+                  >
+                    Copy
+                  </button>
+
+                </div>
+
+
+                <div class="payment-warning">
+                  <strong>Safety reminder:</strong>
+                  Always check the account name and number before
+                  paying. Never share your PIN or password.
+                </div>
+
+              </div>
+
+
+              <!-- CONSENT -->
+
+              <div class="consent-box">
+
+                <input
+                  type="checkbox"
+                  id="confirmDetails"
+                  name="confirmDetails"
+                  required
+                >
+
+                <label for="confirmDetails">
+                  I confirm that the information I entered is accurate.
+                  I understand that I must send the prepared registration
+                  message to the selected Telegram admin and manually
+                  attach my payment confirmation if requested.
+                </label>
+
+              </div>
+
+
+              <!-- SUBMIT -->
+
+              <button
+                type="submit"
+                id="submitButton"
+                class="submit-button"
+              >
+                Prepare Registration Message →
+              </button>
+
+
+              <div
+                id="formMessage"
+                class="form-message"
+                role="status"
+                aria-live="polite"
+              ></div>
+
+
+              <p class="privacy-note">
+                Privacy notice: This page prepares a message in your
+                browser. It does not save your information to a database
+                or automatically send your information to Telegram.
+              </p>
+
+            </form>
+
+          </div>
 
         </div>
-    </div>
-</section>
 
-</main>
+      </div>
+    </section>
 
 
-<!-- FOOTER -->
+    <!-- ================= FAQ ================= -->
 
-<footer>
+    <section id="faq">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-tag">HELP CENTER</span>
+
+          <h2>Frequently Asked Questions</h2>
+
+          <p>
+            Important information about the registration process.
+          </p>
+
+        </div>
+
+
+        <div class="faq-list">
+
+          <article class="faq-item">
+            <h3>1. Who can register?</h3>
+
+            <p>
+              Students in Grade 9 and Grade 10 can use this
+              registration form.
+            </p>
+          </article>
+
+
+          <article class="faq-item">
+            <h3>2. How much is the registration fee?</h3>
+
+            <p>
+              The registration fee is 50 Ethiopian Birr (ETB).
+            </p>
+          </article>
+
+
+          <article class="faq-item">
+            <h3>3. How do I send my registration details?</h3>
+
+            <p>
+              Complete the form and select an admin. The website will
+              prepare your message. Copy it, open Telegram, find the
+              selected admin, paste the message, and send it.
+            </p>
+          </article>
+
+
+          <article class="faq-item">
+            <h3>4. Will my payment screenshot be attached automatically?</h3>
+
+            <p>
+              No. Open your Telegram conversation and attach the
+              payment screenshot manually if required by the admin.
+              Then send the message.
+            </p>
+          </article>
+
+
+          <article class="faq-item">
+            <h3>5. Does completing the form confirm my registration?</h3>
+
+            <p>
+              No. Preparing the message does not confirm registration
+              or verify payment. Follow up with your selected Telegram
+              admin for confirmation.
+            </p>
+          </article>
+
+
+          <article class="faq-item">
+            <h3>6. When is the deadline?</h3>
+
+            <p>
+              The deadline is November 24, 2026, at 12:30 PM
+              Ethiopia time (UTC+3). The form closes when the
+              deadline passes.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
     <div class="container">
 
-        <h3>KEYRADDIIN PREMIUM</h3>
+      <div class="footer-main">
 
-        <p>Education • Knowledge • Success</p>
+        <div class="footer-brand">
 
-        <p style="margin-top:8px;">
-            Registration Fee:
-            <span class="footer-gold">50 ETB</span>
-        </p>
+          <strong>KEYRADDIIN PREMIUM</strong>
 
-        <p style="margin-top:12px;">
-            © <span id="currentYear"></span>
-            KEYRADDIIN MEDIA. All rights reserved.
-        </p>
+          <p>
+            Supporting students through educational resources,
+            exam preparation, and learning support.
+          </p>
+
+        </div>
+
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#features">Benefits</a>
+          <a href="#register">Register</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="currentYear"></span> KEYRADDIIN PREMIUM.
+          All rights reserved.
+        </span>
+
+        <span>
+          Learn • Prepare • Succeed
+        </span>
+
+      </div>
 
     </div>
-</footer>
-
-
-<script>
-/* =========================================================
-   KEYRADDIIN PREMIUM REGISTRATION
-   Registration deadline:
-   October 30, 2027 at 12:30 PM Ethiopia Time (UTC+3)
-   ========================================================= */
-
-
-/* DEADLINE */
-
-const registrationDeadline =
-    new Date("2027-10-30T12:30:00+03:00").getTime();
-
-
-/* ELEMENTS */
-
-const yearsElement = document.getElementById("years");
-const daysElement = document.getElementById("days");
-const hoursElement = document.getElementById("hours");
-const minutesElement = document.getElementById("minutes");
-const secondsElement = document.getElementById("seconds");
-
-const countdownStatus =
-    document.getElementById("countdownStatus");
-
-const registerButton =
-    document.getElementById("registerButton");
-
-const registrationSection =
-    document.getElementById("registration");
-
-const closedPanel =
-    document.getElementById("closedPanel");
-
-const registrationForm =
-    document.getElementById("registrationForm");
-
-const submitButton =
-    document.getElementById("submitButton");
-
-const formMessage =
-    document.getElementById("formMessage");
-
-
-/* COUNTDOWN */
-
-function updateCountdown() {
-
-    const now = Date.now();
-    const difference = registrationDeadline - now;
-
-    if (difference <= 0) {
-
-        yearsElement.textContent = "00";
-        daysElement.textContent = "000";
-        hoursElement.textContent = "00";
-        minutesElement.textContent = "00";
-        secondsElement.textContent = "00";
-
-        countdownStatus.textContent =
-            "REGISTRATION DEADLINE HAS PASSED";
-
-        countdownStatus.classList.add("closed");
-
-        registerButton.disabled = true;
-        registerButton.textContent = "REGISTRATION CLOSED";
-
-        registrationForm.querySelectorAll(
-            "input, select, button"
-        ).forEach(function(element) {
-            element.disabled = true;
-        });
-
-        registrationSection.classList.remove("show");
-        closedPanel.style.display = "block";
-
-        return;
-    }
-
-    /*
-      Countdown uses 365 days for the Years display.
-      Remaining time is split into Days, Hours, Minutes,
-      and Seconds.
-    */
-
-    const totalSeconds = Math.floor(difference / 1000);
-
-    const secondsPerYear = 365 * 24 * 60 * 60;
-    const secondsPerDay = 24 * 60 * 60;
-
-    const years = Math.floor(totalSeconds / secondsPerYear);
-
-    const afterYears = totalSeconds % secondsPerYear;
-
-    const days = Math.floor(afterYears / secondsPerDay);
-
-    const afterDays = afterYears % secondsPerDay;
-
-    const hours = Math.floor(afterDays / 3600);
-
-    const afterHours = afterDays % 3600;
-
-    const minutes = Math.floor(afterHours / 60);
-
-    const seconds = afterHours % 60;
-
-
-    yearsElement.textContent =
-        String(years).padStart(2, "0");
-
-    daysElement.textContent =
-        String(days).padStart(3, "0");
-
-    hoursElement.textContent =
-        String(hours).padStart(2, "0");
-
-    minutesElement.textContent =
-        String(minutes).padStart(2, "0");
-
-    secondsElement.textContent =
-        String(seconds).padStart(2, "0");
-
-
-    countdownStatus.textContent = "REGISTRATION IS OPEN";
-    countdownStatus.classList.remove("closed");
-
-    registerButton.disabled = false;
-    submitButton.disabled = false;
-
-    closedPanel.style.display = "none";
-}
-
-
-/* START COUNTDOWN */
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
-
-
-/* OPEN REGISTRATION FORM */
-
-function showRegistration() {
-
-    if (Date.now() >= registrationDeadline) {
-        updateCountdown();
-        return;
-    }
-
-    registrationSection.classList.add("show");
-
-    registrationSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-}
-
-
-/* GENERATE REFERENCE */
-
-function generateReference() {
-
-    const randomPart = Math.random()
-        .toString(36)
-        .substring(2, 8)
-        .toUpperCase();
-
-    const timePart = Date.now()
-        .toString()
-        .slice(-6);
-
-    return "KPR-" + timePart + "-" + randomPart;
-}
-
-
-/* FORM MESSAGE */
-
-function showMessage(message, type) {
-
-    formMessage.textContent = message;
-
-    formMessage.className =
-        "status-message " + type;
-}
-
-
-/* SUBMIT FORM TO SELECTED TELEGRAM ADMIN */
-
-registrationForm.addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    /* Check deadline */
-
-    if (Date.now() >= registrationDeadline) {
-
-        updateCountdown();
-
-        showMessage(
-            "Registration is closed. The deadline has passed.",
-            "error"
-        );
-
-        return;
-    }
-
-
-    /* Validate form */
-
-    if (!registrationForm.checkValidity()) {
-        registrationForm.reportValidity();
-        return;
-    }
-
-
-    /* Read student details */
-
-    const fullName =
-        document.getElementById("fullName").value.trim();
-
-    const grade =
-        document.getElementById("grade").value;
-
-    const phone =
-        document.getElementById("phone").value.trim();
-
-    const school =
-        document.getElementById("school").value.trim();
+  </footer>
+
+
+  <!-- ================= TOAST ================= -->
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+    "use strict";
+
+    /* =====================================================
+       CONFIGURATION
+       ===================================================== */
+
+    const CONFIG = {
+      fee: 50,
+
+      /*
+       * November 24, 2026, 12:30 PM Ethiopia time.
+       * Ethiopia is UTC+3 and does not observe daylight saving time.
+       * 12:30 PM UTC+3 = 09:30 UTC.
+       */
+      deadlineUTC: Date.UTC(
+        2026,
+        10,
+        24,
+        9,
+        30,
+        0
+      ),
+
+      accounts: {
+        "E-Birr": {
+          number: "0995555866",
+          name: "Keyraddiin Abdella Jibraill"
+        },
+
+        "M-Pesa": {
+          number: "0799574155",
+          name: "Abdella Jibraill Ahmed"
+        }
+      },
+
+      admins: {
+        "Keyr025": "@Keyr025",
+        "keyraddiin": "@keyraddiin",
+        "Key05r": "@Key05r"
+      },
+
+      /*
+       * Change this if your public website URL changes.
+       */
+      siteURL:
+        "https://keyraddiin18-prog.github.io/KEYRADDIIN-PREMIUM-REGISTRATION/"
+    };
+
+
+    /* =====================================================
+       DOM REFERENCES
+       ===================================================== */
+
+    const form =
+      document.getElementById("registrationForm");
+
+    const submitButton =
+      document.getElementById("submitButton");
+
+    const formMessage =
+      document.getElementById("formMessage");
 
     const paymentMethod =
-        document.getElementById("paymentMethod").value;
+      document.getElementById("paymentMethod");
 
-    const paymentReference =
-        document.getElementById("paymentReference")
-            .value.trim();
+    const deadlineStatus =
+      document.getElementById("deadlineStatus");
 
-    const telegramAdmin =
-        document.getElementById("telegramAdmin").value;
+    const heroStatus =
+      document.getElementById("heroStatus");
+
+    const toast =
+      document.getElementById("toast");
 
 
-    if (!telegramAdmin) {
+    /* =====================================================
+       CURRENT YEAR
+       ===================================================== */
 
-        showMessage(
-            "Please select a Telegram admin.",
-            "error"
-        );
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
 
-        return;
+
+    /* =====================================================
+       TOAST NOTIFICATION
+       ===================================================== */
+
+    let toastTimer;
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+
+      clearTimeout(toastTimer);
+
+      toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2800);
     }
 
 
-    /* Validate allowed Telegram usernames */
+    /* =====================================================
+       COPY ACCOUNT NUMBER
+       ===================================================== */
 
-    const allowedAdmins = [
-        "Keyr025",
-        "keyraddiin",
-        "Key05r"
-    ];
+    async function copyText(value) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(value);
+        } else {
+          const temporaryInput =
+            document.createElement("textarea");
 
-    if (!allowedAdmins.includes(telegramAdmin)) {
+          temporaryInput.value = value;
+          temporaryInput.style.position = "fixed";
+          temporaryInput.style.opacity = "0";
 
-        showMessage(
-            "Please choose one of the available Telegram admins.",
-            "error"
+          document.body.appendChild(temporaryInput);
+
+          temporaryInput.select();
+
+          const copied =
+            document.execCommand("copy");
+
+          temporaryInput.remove();
+
+          if (!copied) {
+            throw new Error("Copy failed");
+          }
+        }
+
+        showToast("Copied: " + value);
+
+      } catch (error) {
+        showToast(
+          "Copy was unsuccessful. Please copy the number manually."
         );
-
-        return;
+      }
     }
 
 
-    /* Generate registration reference */
-
-    const reference = generateReference();
-
-
-    /* Prepare Telegram message */
-
-    const registrationDetails = [
-        "🎓 KEYRADDIIN PREMIUM REGISTRATION",
-        "━━━━━━━━━━━━━━━━━━━━",
-        "",
-        "🆔 Registration Reference: " + reference,
-        "👤 Student Name: " + fullName,
-        "📚 Grade: " + grade,
-        "📱 Phone Number: " + phone,
-        "🏫 School: " + school,
-        "💳 Payment Method: " + paymentMethod,
-        "🧾 Transaction Reference: " +
-            (paymentReference || "Not provided"),
-        "💰 Registration Fee: 50 ETB",
-        "⏳ Registration Deadline: October 30, 2027, 12:30 PM Ethiopia Time",
-        "📌 Payment Status: Awaiting manual verification",
-        "",
-        "I have completed the registration form.",
-        "I will attach my payment screenshot directly in Telegram.",
-        "",
-        "Please verify my registration and payment.",
-        "",
-        "Thank you."
-    ].join("\n");
+    document.querySelectorAll("[data-copy]").forEach(button => {
+      button.addEventListener("click", () => {
+        copyText(button.dataset.copy);
+      });
+    });
 
 
-    /* Create Telegram URL */
+    /* =====================================================
+       ETHIOPIA TIME FORMATTING
+       ===================================================== */
 
-    const telegramURL =
-        "https://t.me/" +
-        telegramAdmin +
-        "?text=" +
-        encodeURIComponent(registrationDetails);
-
-
-    /*
-      Recheck the deadline immediately before opening Telegram.
-    */
-
-    if (Date.now() >= registrationDeadline) {
-
-        updateCountdown();
-
-        showMessage(
-            "Registration is closed.",
-            "error"
-        );
-
-        return;
+    function formatEthiopiaDate(date) {
+      return new Intl.DateTimeFormat("en-US", {
+        timeZone: "Africa/Addis_Ababa",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+      }).format(date);
     }
 
 
-    /*
-      Open Telegram in the same browsing context where possible.
-      Telegram will receive the prepared text, not the screenshot.
-    */
+    /* =====================================================
+       REGISTRATION DEADLINE
+       ===================================================== */
 
-    showMessage(
-        "Your registration message is ready. Telegram will open. " +
-        "Attach your payment screenshot in the Telegram chat, " +
-        "then press Send. Your reference is " + reference + ".",
-        "success"
-    );
-
-    window.location.href = telegramURL;
-
-});
+    function isRegistrationOpen() {
+      return Date.now() < CONFIG.deadlineUTC;
+    }
 
 
-/* FOOTER YEAR */
+    function updateDeadline() {
+      const now = Date.now();
 
-document.getElementById("currentYear").textContent =
-    new Date().getFullYear();
+      const remaining =
+        CONFIG.deadlineUTC - now;
 
-</script>
+      if (remaining <= 0) {
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        deadlineStatus.textContent =
+          "Registration is closed. The deadline has passed.";
+
+        deadlineStatus.className =
+          "deadline-status closed";
+
+        heroStatus.textContent = "CLOSED";
+        heroStatus.style.background = "#fee2e2";
+        heroStatus.style.color = "#991b1b";
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Registration Closed";
+
+        form.querySelectorAll(
+          "input, select, textarea"
+        ).forEach(field => {
+          field.disabled = true;
+        });
+
+        return;
+      }
+
+      const totalSeconds =
+        Math.floor(remaining / 1000);
+
+      const days =
+        Math.floor(totalSeconds / 86400);
+
+      const hours =
+        Math.floor((totalSeconds % 86400) / 3600);
+
+      const minutes =
+        Math.floor((totalSeconds % 3600) / 60);
+
+      const seconds =
+        totalSeconds % 60;
+
+      document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+      deadlineStatus.textContent =
+        "Registration is currently open.";
+
+      deadlineStatus.className =
+        "deadline-status open";
+
+      heroStatus.textContent = "OPEN";
+      heroStatus.style.background = "#dcfce7";
+      heroStatus.style.color = "#166534";
+
+      submitButton.disabled = false;
+      submitButton.textContent =
+        "Prepare Registration Message →";
+    }
+
+
+    updateDeadline();
+
+    setInterval(updateDeadline, 1000);
+
+
+    /* =====================================================
+       PHONE VALIDATION
+       ===================================================== */
+
+    function isValidPhone(phone) {
+      /*
+       * Allows common Ethiopian local and international formats.
+       * The admin can verify the actual number later.
+       */
+      const normalized =
+        phone.replace(/[\s()-]/g, "");
+
+      return /^\+?[0-9]{9,15}$/.test(normalized);
+    }
+
+
+    /* =====================================================
+       PREPARE REGISTRATION MESSAGE
+       ===================================================== */
+
+    function showFormError(message) {
+      formMessage.className = "form-message error";
+      formMessage.textContent = message;
+    }
+
+
+    function buildRegistrationMessage(data) {
+      const account =
+        CONFIG.accounts[data.paymentMethod];
+
+      const admin =
+        CONFIG.admins[data.telegramAdmin];
+
+      const reference =
+        data.transactionReference || "Not provided";
+
+      return [
+        "KEYRADDIIN PREMIUM — REGISTRATION",
+        "",
+        "Hello, I would like to register.",
+        "",
+        "Full Name: " + data.fullName,
+        "Grade: " + data.grade,
+        "Phone Number: " + data.phone,
+        "School: " + data.school,
+        "",
+        "Registration Fee: " + CONFIG.fee + " ETB",
+        "Payment Method: " + data.paymentMethod,
+        "Payment Account: " + account.number,
+        "Account Name: " + account.name,
+        "Transaction Reference: " + reference,
+        "",
+        "Selected Telegram Admin: " + admin,
+        "",
+        "Please help me verify my payment and registration.",
+        "",
+        "Deadline: November 24, 2026, 12:30 PM Ethiopia time.",
+        "",
+        "Website: " + CONFIG.siteURL
+      ].join("\n");
+    }
+
+
+    /* =====================================================
+       FORM SUBMISSION
+       ===================================================== */
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+
+      formMessage.className = "form-message";
+      formMessage.replaceChildren();
+
+      if (!isRegistrationOpen()) {
+        showFormError(
+          "Registration is closed because the deadline has passed."
+        );
+
+        updateDeadline();
+        return;
+      }
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const data = {
+        fullName:
+          document.getElementById("fullName")
+            .value.trim(),
+
+        grade:
+          document.getElementById("grade")
+            .value,
+
+        phone:
+          document.getElementById("phone")
+            .value.trim(),
+
+        school:
+          document.getElementById("school")
+            .value.trim(),
+
+        paymentMethod:
+          document.getElementById("paymentMethod")
+            .value,
+
+        transactionReference:
+          document.getElementById("transactionReference")
+            .value.trim(),
+
+        telegramAdmin:
+          document.getElementById("telegramAdmin")
+            .value
+      };
+
+
+      if (data.fullName.length < 3) {
+        showFormError(
+          "Please enter your full name."
+        );
+
+        return;
+      }
+
+
+      if (!isValidPhone(data.phone)) {
+        showFormError(
+          "Please enter a valid phone number using 9 to 15 digits. You may include a leading +."
+        );
+
+        document.getElementById("phone").focus();
+
+        return;
+      }
+
+
+      if (!CONFIG.accounts[data.paymentMethod]) {
+        showFormError(
+          "Please select a valid payment method."
+        );
+
+        return;
+      }
+
+
+      if (!CONFIG.admins[data.telegramAdmin]) {
+        showFormError(
+          "Please select a Telegram admin."
+        );
+
+        return;
+      }
+
+
+      if (!document.getElementById("confirmDetails").checked) {
+        showFormError(
+          "Please confirm that your information is accurate."
+        );
+
+        return;
+      }
+
+
+      const message =
+        buildRegistrationMessage(data);
+
+
+      /* Display the prepared message in the page. */
+
+      formMessage.className = "form-message success";
+
+      const heading =
+        document.createElement("strong");
+
+      heading.textContent =
+        "Your registration message is ready.";
+
+      const instructions =
+        document.createElement("p");
+
+      instructions.style.marginTop = "8px";
+
+      instructions.textContent =
+        "Step 1: Copy the message below. Step 2: Open Telegram and find " +
+        CONFIG.admins[data.telegramAdmin] +
+        ". Step 3: Paste the message, attach your payment screenshot if required, and send it.";
+
+
+      const preview =
+        document.createElement("textarea");
+
+      preview.className = "message-preview";
+      preview.readOnly = true;
+      preview.setAttribute(
+        "aria-label",
+        "Prepared registration message"
+      );
+
+      preview.value = message;
+
+
+      const actions =
+        document.createElement("div");
+
+      actions.className = "message-actions";
+
+
+      const copyButton =
+        document.createElement("button");
+
+      copyButton.type = "button";
+      copyButton.className = "small-button primary";
+      copyButton.textContent = "Copy Registration Message";
+
+
+      copyButton.addEventListener("click", async () => {
+        try {
+          await copyText(message);
+        } catch (error) {
+          preview.focus();
+          preview.select();
+
+          showToast(
+            "Please copy the selected message manually."
+          );
+        }
+      });
+
+
+      const telegramButton =
+        document.createElement("a");
+
+      telegramButton.className =
+        "small-button secondary";
+
+      telegramButton.href =
+        "https://t.me/" + data.telegramAdmin;
+
+      telegramButton.target = "_blank";
+
+      telegramButton.rel =
+        "noopener noreferrer";
+
+      telegramButton.textContent =
+        "Open " + CONFIG.admins[data.telegramAdmin];
+
+
+      actions.append(copyButton, telegramButton);
+
+      const note =
+        document.createElement("p");
+
+      note.className = "privacy-note";
+
+      note.textContent =
+        "Important: Your information has not been sent automatically. " +
+        "Send the message yourself in Telegram. Attach your payment screenshot manually if requested. " +
+        "Your registration is not confirmed until the admin verifies it.";
+
+
+      formMessage.append(
+        heading,
+        instructions,
+        preview,
+        actions,
+        note
+      );
+
+
+      formMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    });
+
+
+    /* =====================================================
+       PREVENT CONFUSION ABOUT REGISTRATION STATUS
+       ===================================================== */
+
+    paymentMethod.addEventListener("change", () => {
+      const selected = paymentMethod.value;
+
+      if (selected && CONFIG.accounts[selected]) {
+        const account = CONFIG.accounts[selected];
+
+        showToast(
+          selected + " account: " + account.number
+        );
+      }
+    });
+
+  </script>
 
 </body>
 </html>
